@@ -19,8 +19,8 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=31G
 #SBATCH --partition=l40
-#SBATCH --output=/scratch.hpc/carmine.santella/prometeia/slurm-%j.out
-#SBATCH --chdir=/scratch.hpc/carmine.santella/prometeia
+#SBATCH --output=/scratch.hpc/carmine.santella/Natural-Language-Processing-Unibo-PW/slurm-%j.out
+#SBATCH --chdir=/scratch.hpc/carmine.santella/Natural-Language-Processing-Unibo-PW
 #SBATCH --gres=gpu:1
 
 set -euo pipefail
