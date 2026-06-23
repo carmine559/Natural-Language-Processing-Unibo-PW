@@ -1,0 +1,115 @@
+question	correct_answer	choiceA	choiceB	choiceC	choiceD	choiceE	custom_id	difficulty_level
+1. L'azienda tradizionale multidomestica ha un alto livello di aggregazione globale e un basso livello di adattamento locale.								
+2. Il modello organizzativo internazionale è caratterizzato da aziende che hanno una forte dipendenza dalle vendite nazionali e che esportano prodotti in modo opportunistico.								
+3. Il modello transnazionale mira a ridurre al minimo i processi di gestione per diventare più efficiente nel processo decisionale.								
+4. Il modello organizzativo multidomestico consente un significativo trasferimento di conoscenze dalla sede centrale dell'azienda alle sue filiali.								
+5. Le aziende globali operano con strategie integrate a livello mondiale principalmente per migliorare le economie di scala e di scopo attraverso la standardizzazione.								
+"Quali di queste affermazioni sono FALSE?"""	D	2, 3, 5	2, 3, 4, 5	1, 2, 3, 4, 5	1, 3, 4	Nessuna delle precedenti	BOOKS__1326	hard
+1. Il concetto di vantaggio comparato si applica solo alle industrie concentrate con elevate barriere all'ingresso.								
+2. Gli impegni a lungo termine delle multinazionali possono portare all'inerzia aziendale in un clima competitivo globale in continua evoluzione.								
+3. Negli oligopoli globali, le caratteristiche delle imprese hanno un impatto minimo sulla posizione strategica e sui modelli commerciali.								
+4. L'intervento del governo nelle industrie oligopolistiche può spostare l'equilibrio tra le imprese di diversi Paesi.								
+5. Nelle industrie frammentate, i fattori nazionali determinano principalmente la localizzazione della produzione e la direzione delle esportazioni.								
+"Quali di queste affermazioni sono VERE?"""	D	4	2, 3, 4, 5	5	2, 4, 5	Nessuna delle precedenti	BOOKS__1330	hard
+1. Un'impresa può avere un utile contabile positivo e un utile economico negativo.								
+2. I costi impliciti sono sempre associati a pagamenti effettivi in contanti effettuati dall'impresa.								
+3. I costi espliciti sono noti anche come spese vive che possono essere quantificate in termini monetari.								
+4. L'utile contabile tiene conto solo dei costi espliciti, ignorando i costi impliciti.								
+"Quali di queste affermazioni sono VERE?"""	B	2, 4	1, 3, 4	Tutte le scelte sono corrette	1, 2, 3, 4	Nessuna delle precedenti	BOOKS__1411	medium
+1. Il baby boom si riferisce alla diminuzione delle nascite negli anni dal 1946 al 1964.								
+2. L'aspettativa di vita è generalmente aumentata, contribuendo all'invecchiamento della popolazione statunitense.								
+3. La maggioranza della popolazione residente negli Stati Uniti è costituita da afroamericani, con una percentuale pari o superiore al 50%.								
+"Quali di queste affermazioni sono VERE?"""	C	1, 2, 3	1, 3	2	Tutte le scelte sono corrette	Nessuna delle precedenti	BOOKS__1686	easy
+Qual è la percentuale di passività correnti rispetto al totale delle attività al 31 dicembre 2022?								
+								
+## TABELLA								
+**STATO PATRIMONIALE CONSOLIDATO AL 31 DICEMBRE 2022**								
+(Migliaia di euro)								
+								
+| ATTIVITÀ | Note | 31/12/2022 | 31/12/2021 | PATRIMONIO E PASSIVITÀ | Note | 31/12/2022 | 31/12/2021 |								
+|--------|-------|------------|------------|-------------------------|-------|------------|------------|								
+| **ATTIVITÀ NON CORRENTI** | | **PATRIMONIO NETTO** | | | | | | |								
+| Avviamento | 4 | 792.897 | 725.789 | Capitale sociale | 12.a | 12.356 | 13.070 |								
+| Altre attività immateriali | 5 | 374.092 | 419.967 | Sovrapprezzo azioni | 12.b | 449.391 | 449.391 |								
+| Diritti d'uso | 26.a | 177.395 | 180.704 | Utili a nuovo e altre riserve | 153.957 | 187.871 |								
+| Immobili, impianti e macchinari | 7 | 253.057 | 253.774 | Utile/(perdita) dell'esercizio di pertinenza della Capogruppo | 48.600 | 32.242 |								
+| Partecipazioni contabilizzate con il metodo del patrimonio netto | | 3.403 | 520 | Azioni proprie | 12.c | (11.117) | (3.427) |								
+| Attività finanziarie non correnti | 8 | 17.096 | 17.693 | Rettifiche di valore - Riserva di conversione in valuta estera | 12.e | (43.440) | (81.136) |								
+| Attività per imposte anticipate | 20.c | 58.163 | 61.024 | **Patrimonio netto attribuibile agli azionisti della controllante** | **606.747** | **617.951** |								
+| Totale attività non correnti** | **1.676.103** | **1.659.487** | Partecipazioni di minoranza | 13 | 36.200 | 48.715 |								
+| Totale patrimonio netto** | **642.947** | **666.366** |								
+| **ATTIVITÀ CORRENTI** | | **PASSIVITÀ NON CORRENTI** | | | | | | | | | | | | | | | | | | | | | |								
+| Attività non correnti classificate come possedute per la vendita | 3.y | 37.497 | - | Fondi a lungo termine | 17 & 27.b | 37.030 | 34.265 |								
+| Rimanenze di magazzino | 9 | 9.753 | 11.240 | Obbligazioni e prestiti bancari | 14 | 808.611 | 724.804 |								
+| Crediti commerciali e altri crediti - Crediti commerciali e altri crediti | 10 | 447.422 | 393.098 | Debiti per leasing | 26.a | 136.143 | 144.968 |								
+| Crediti commerciali verso imprese collegate | 10 & 28 | 187 | 221 | Altre passività finanziarie | 15 | 22.157 | 22.805 |								
+| Altri crediti | 10 | 27.845 | 26.978 | Imposte differite passive | 20.d | 109.707 | 124.450 |								
+| Attività per imposte sul reddito delle società | 20.b | 20.313 | 17.707 | Altre passività non correnti | 18 | 89.070 | 75.352 |								
+| Altre attività correnti | | 23.251 | 15.824 | **Totale passività non correnti** | | **1.203.083** | **1.126.645** |								
+Altre attività finanziarie correnti | 11 | 7.423 | 6.386 | ** PASSIVITA' CORRENTI** | | | | |								
+| Disponibilità liquide e mezzi equivalenti | 183.010 | 176.546 | Passività collegate ad attività non correnti possedute per la vendita | 3,y | 16.538 | - |								
+| Totale attività correnti** | **756.501** | **646.998** | Fondi a breve termine | 7.972 | 7.487 |								
+| **Totale attivo** | **2.432.604** | **2.306.485** | Obbligazioni e prestiti bancari | 14 | 27.326 | 47.074 |								
+| | | Obbligazioni in leasing | 26.a | 62.715 | 54.540 |								
+| Debiti commerciali e altri debiti | 19 295.159 | 290.210 | | | | Debiti commerciali verso società collegate | 19 295.159 | 290.210 |								
+| | Debiti commerciali da società collegate | 19 e 28 | 13.794 | 19.920 |								
+| Passività per imposte sul reddito delle società | 20.b | 19.154 | 18.895 |								
+| | Altre passività correnti | 83.884 | 86.807 |								
+| Totale passività correnti** | **585.889** | **515.934** |								
+| TOTALE PATRIMONIO NETTO E PASSIVITÀ** | **2.432.604** | **2.306.485** |								
+"	A	24.08%	25.00%	23.94%	22.05%	Nessuna delle precedenti	FINANCIALS__4358	hard"								
+Quale utile totale da cash flow hedge viene riportato direttamente nel patrimonio netto per l'anno 2024?								
+								
+## TABELLA								
+### Conto economico complessivo consolidato								
+(Importi in milioni di euro)								
+								
+| Note | 2024 | 2023 |								
+|-------|------|------|								
+| Utile netto | 5.877 | 5.395 |								
+| **Voci che saranno riclassificate a conto economico in esercizi futuri** | | | |								
+| Altri utili complessivi rilevati direttamente nel patrimonio netto: | | |								
+| Differenze di conversione relative ai bilanci delle gestioni estere | (72) | (40) |								
+| Copertura di flussi di cassa (cash flow hedge)								
+| - Utile | (26) 7 | - | - | - Perdita | (26) - |								
+| - Perdita | (26) - | (1) |								
+| Effetto fiscale | (2) | (1) |								
+| **Totale** | **(67)** | **(42)** |								
+| **Trasferimenti a conto economico:** | | |								
+| Copertura dei flussi finanziari | | |								
+| - Utile | (26) 1 | 14 |								
+| - Perdita | (26) - | - | - |								
+| Effetto fiscale | - | (2) |								
+| **Totale** | **1** | **12** |								
+| **Totale utile complessivo dell'esercizio** | **5.811** | **5.365** |								
+| **Totale risultato complessivo attribuibile a:** | | |								
+| Titolari di azioni della Capogruppo | 5.800 | 5.351 |								
+| Interessi di minoranza | 11 | 14 |								
+| **Totale utile complessivo dell'esercizio** | **5.811** | **5.365** |								
+"	A	26 milioni di euro	1 milione di euro	14 milioni di euro	7 milioni di euro	Nessuna delle precedenti	FINANCIALS__4844	medium"								
+Qual è l'ammontare delle azioni ordinarie in KRW al 31 dicembre 2024?								
+								
+## TABELLA								
+### **STATO PATRIMONIALE CONSOLIDATO**								
+(In milioni di won coreani, in migliaia di dollari USA)								
+								
+| Note | 31 dicembre 2024 (KRW) | 31 dicembre 2023 (KRW) | 31 dicembre 2024 (USD) | 31 dicembre 2023 (USD) |								
+|-------|--------------------------|--------------------------|--------------------------|--------------------------|								
+| **Patrimonio netto attribuibile ai soci della capogruppo** | | | | | | | | |								
+| Azioni privilegiate | 18 | 119.467 | 119.467 | 87.644 | 87.644 |								
+| Azioni ordinarie | 18 | 778.047 | 778.047 | 570.795 | 570.795 |								
+| Sovrapprezzo di emissione | | 4.403.893 | 4.403.893 | 3.230.807 | 3.230.807 |								
+| Utili a nuovo | 19 | 370.513.188 | 346.652.238 | 271.817.840 | 254.312.844 |								
+| Altre componenti del patrimonio netto | 20, 33 | 15.873.008 | 1.280.130 | 11.644.840 | 939.136 |								
+| **Totale patrimonio netto attribuibile ai soci della controllante** | **391.687.603** | **353.233.775** | **287.351.926** | **259.141.226** |								
+| Interessi di minoranza | 31 | 10.504.467 | 10.444.090 | 7.706.342 | 7.662.049 |								
+| **Totale patrimonio netto** | **402.192.070** | **363.677.865** | **295.058.268** | **266.803.275** |								
+| **Totale passività e patrimonio netto** | | **514.531.948** | **455.905.980** | **377.473.643** | **334.464.151** |								
+"	B	119,467	778,047	570,795	4,403,893	Nessuna delle precedenti	FINANCIALS__4415	easy"								
+1. Quando si considerano i casi di attività dannose, è essenziale bilanciare la riduzione totale del valore della produzione con i guadagni derivanti dalla prevenzione degli effetti dannosi, al fine di massimizzare il benessere sociale.								
+2. Le normative o le imposte governative volte a mitigare gli effetti dannosi sono sempre in grado di migliorare l'efficienza economica complessiva e il benessere sociale.								
+3. Secondo l'analisi tradizionale, rendere una fabbrica responsabile dei danni che provoca porterebbe sempre a un'allocazione socialmente ottimale delle risorse in tutte le industrie.								
+4. Nell'esempio di una fabbrica che emette fumo, il rimedio comunemente suggerito è quello di concedere alle parti colpite il diritto di fare causa per danni o ricevere un risarcimento per il danno causato.								
+"Quali di queste affermazioni sono FALSE?"""	B	1, 2	2, 3	1, 3, 4	Tutte le scelte sono corrette	Nessuna delle precedenti	PAPER__3328	hard
+Cosa descrive meglio i costi di agenzia nel contesto dell'impresa?	A	Costi sostenuti dai mandanti per garantire che gli agenti agiscano nel loro interesse.	Costi associati esclusivamente all'emissione di titoli di capitale e di debito.	Costi derivanti dalla conformità normativa e dalle spese legali.	Costi indipendenti dalla struttura proprietaria dell'impresa.	Nessuna delle precedenti	PAPER__2829	medium
+Qual è la caratteristica principale di un panico bancario descritto nel contesto dell'attuale sistema finanziario?	A	Il sistema bancario è insolvente e non può onorare i propri obblighi.	I depositanti ritirano i fondi dai loro conti in preda al panico.	Il sistema finanziario è interamente sostenuto da titoli di Stato.	La maggior parte dei depositanti è in grado di valutare con precisione la solvibilità delle proprie banche.	Nessuna delle precedenti	PAPER__3189	easy
