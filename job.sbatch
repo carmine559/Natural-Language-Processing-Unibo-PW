@@ -27,12 +27,12 @@ set -euo pipefail
 
 # Caches / outputs live on scratch (home quota is only 400 MB)
 export HF_HOME="/scratch.hpc/${USER}/hf_cache"
-export PROM_OUTPUT_DIR="/scratch.hpc/${USER}/prometeia/outputs"
+export PROM_OUTPUT_DIR="/scratch.hpc/${USER}/Natural-Language-Processing-Unibo-PW/outputs"
 # Avoid surprise downloads on a compute node — model is pre-cached by setup_env.sh:
 export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
 
-VENV="/scratch.hpc/${USER}/prometeia/venv"
+VENV="/scratch.hpc/${USER}/Natural-Language-Processing-Unibo-PW/venv"
 
 # Full validation run (reports accuracy). For the test submission, change
 # --data to data/test_set_unlabelled_IT.tsv and pick a different --output.

@@ -15,7 +15,7 @@
 # ─────────────────────────────────────────────────────────────
 set -euo pipefail
 
-SCRATCH="/scratch.hpc/${USER}/prometeia"
+SCRATCH="/scratch.hpc/${USER}/Natural-Language-Processing-Unibo-PW"
 VENV="${SCRATCH}/venv"
 export HF_HOME="/scratch.hpc/${USER}/hf_cache"
 
