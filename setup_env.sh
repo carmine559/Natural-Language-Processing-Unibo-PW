@@ -26,7 +26,10 @@ echo "Venv        : ${VENV}"
 echo "HF_HOME     : ${HF_HOME}"
 echo "Model       : ${MODEL}"
 
-mkdir -p "${SCRATCH}" "${HF_HOME}"
+# Redirect pip / system temp to scratch — /tmp on giano is tiny and shared,
+# which causes "No space left on device" when downloading large wheels (torch, triton).
+export TMPDIR="${SCRATCH}/tmp"
+mkdir -p "${SCRATCH}" "${HF_HOME}" "${TMPDIR}"
 
 # 1. Virtual environment
 if [ ! -d "${VENV}" ]; then
@@ -37,7 +40,7 @@ source "${VENV}/bin/activate"
 pip3 install --no-cache-dir --upgrade pip
 
 # 2. torch for CUDA 11.8 (per the DISI cluster instructions)
-pip3 install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cu118
+pip3 install torch --no-cache-dir --index-url https://download.pytorch.org/whl/cu118
 
 # 3. The rest of the dependencies
 pip3 install --no-cache-dir -r requirements.txt
