@@ -45,14 +45,16 @@ pip3 install torch --no-cache-dir --index-url https://download.pytorch.org/whl/c
 # 3. The rest of the dependencies
 pip3 install --no-cache-dir -r requirements.txt
 
-# 4. Pre-download the model so compute nodes don't need internet
+# 4. hf_transfer — Rust-based parallel downloader; avoids the stalls that
+#    the default Python requests backend hits on large files (29 GB+ model).
+pip3 install --no-cache-dir hf_transfer
+export HF_HUB_ENABLE_HF_TRANSFER=1
+
+# 6. Pre-download the model so compute nodes don't need internet.
+#    huggingface-cli has built-in resume — if interrupted, just re-run.
 echo "Downloading ${MODEL} into ${HF_HOME} ..."
-python3 - <<PY
-import os
-from huggingface_hub import snapshot_download
-snapshot_download(repo_id="${MODEL}", cache_dir=os.environ["HF_HOME"])
-print("Model cached.")
-PY
+huggingface-cli download "${MODEL}" --cache-dir "${HF_HOME}"
+echo "Model cached."
 
 echo
 echo "Setup complete."
