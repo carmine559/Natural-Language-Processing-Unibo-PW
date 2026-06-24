@@ -29,9 +29,9 @@ import os, sys, pathlib
 sys.path.insert(0, "/kaggle/working")   # where prometeia_pipeline/ lives
 
 # Groq API key from Kaggle Secrets
-from kaggle_secrets import UserSecretsClient
-os.environ["GROQ_API_KEY"] = UserSecretsClient().get_secret("GROQ_API_KEY")
-print("Groq key loaded.")
+# from kaggle_secrets import UserSecretsClient
+# os.environ["GROQ_API_KEY"] = UserSecretsClient().get_secret("GROQ_API_KEY")
+# print("Groq key loaded.")
 
 # %% — GPU check
 import torch

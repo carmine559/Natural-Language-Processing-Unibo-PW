@@ -2,11 +2,9 @@
 # ─────────────────────────────────────────────────────────────
 # setup_env.sh — run ONCE on giano.cs.unibo.it (the submit host).
 #
-# Creates the Python venv and pre-downloads the model into /scratch.hpc/,
-# because:
-#   * the home quota is only 400 MB (a torch venv + model are several GB);
-#   * compute nodes may have no outbound internet, so the model must be
-#     cached on the shared filesystem before any job runs.
+# Creates the Python venv under /scratch.hpc/ (the home quota is only
+# 400 MB — far too small for a torch venv). The model itself is downloaded
+# at runtime by transformers on the first job, cached in HF_HOME on scratch.
 #
 # Usage:
 #   ssh <name.surname>@giano.cs.unibo.it
@@ -45,27 +43,8 @@ pip3 install torch --no-cache-dir --index-url https://download.pytorch.org/whl/c
 # 3. The rest of the dependencies
 pip3 install --no-cache-dir -r requirements.txt
 
-# 4. Enable Xet high-performance transfers (the new fast-download backend).
-export HF_XET_HIGH_PERFORMANCE=1
-
-# 5. HF_TOKEN — unauthenticated downloads are rate-limited and stall.
-if [ -z "${HF_TOKEN:-}" ]; then
-    echo ""
-    echo "WARNING: HF_TOKEN is not set."
-    echo "  Unauthenticated downloads are slow and often stall."
-    echo "  Get a free token at https://huggingface.co/settings/tokens"
-    echo "  then re-run with:  HF_TOKEN=hf_... bash setup_env.sh"
-    echo ""
-    echo "Continuing anyway (may be slow / unreliable) ..."
-fi
-
-# 6. Pre-download the model so compute nodes don't need internet.
-#    `hf download` has built-in resume — if interrupted, just re-run.
-echo "Downloading ${MODEL} into ${HF_HOME} ..."
-hf download "${MODEL}" --cache-dir "${HF_HOME}"
-echo "Model cached."
-
 echo
-echo "Setup complete."
-echo "Now copy this repo + data under ${SCRATCH} (or run from a shared path)"
-echo "and submit with:  sbatch job.sbatch"
+echo "Setup complete. The model (${MODEL}) will be downloaded automatically"
+echo "on the first job run and cached in ${HF_HOME} for subsequent runs."
+echo ""
+echo "Submit with:  sbatch job.sbatch"

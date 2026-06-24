@@ -25,12 +25,12 @@
 
 set -euo pipefail
 
-# Caches / outputs live on scratch (home quota is only 400 MB)
+# Caches / outputs live on scratch (home quota is only 400 MB).
+# The model will be downloaded on the first run and cached in HF_HOME;
+# subsequent runs reuse the cache.
 export HF_HOME="/scratch.hpc/${USER}/hf_cache"
 export PROM_OUTPUT_DIR="/scratch.hpc/${USER}/Natural-Language-Processing-Unibo-PW/outputs"
-# Avoid surprise downloads on a compute node — model is pre-cached by setup_env.sh:
-export HF_HUB_OFFLINE=1
-export TRANSFORMERS_OFFLINE=1
+mkdir -p "${HF_HOME}" "${PROM_OUTPUT_DIR}"
 
 VENV="/scratch.hpc/${USER}/Natural-Language-Processing-Unibo-PW/venv"
 
