@@ -140,7 +140,8 @@ def compute_scores(
 
     # Small penalty for solver's answer when negation present but critic
     # didn't flag inversion (conservative precaution)
-    if profiler.negation_present and ca != "negation_inversion":
+    ca_type = critic.phase_1_challenge.counterargument_type
+    if profiler.negation_present and ca_type != "negation_inversion":
         scores[solver.proposed_answer] *= 0.93
 
     return scores

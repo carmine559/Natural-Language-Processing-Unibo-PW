@@ -5,7 +5,6 @@
 # Submit from giano:   sbatch job.sbatch
 # (Run setup_env.sh once beforehand.)
 #
-# Edit the placeholders below (name.surname) before submitting.
 # To target the RTX 2080 Ti instead, change --partition to rtx2080 and
 # --partition l40 -> rtx2080 in the python command (smaller GPU; if the 14B
 # OOMs, set PROM_MODEL=Qwen/Qwen2.5-7B-Instruct below).
