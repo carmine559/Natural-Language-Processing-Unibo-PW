@@ -17,12 +17,14 @@ SCRATCH="/scratch.hpc/${USER}/Natural-Language-Processing-Unibo-PW"
 VENV="${SCRATCH}/venv"
 export HF_HOME="/scratch.hpc/${USER}/hf_cache"
 
-MODEL="${PROM_MODEL:-Qwen/Qwen2.5-14B-Instruct}"
+LIGHT_MODEL="${PROM_LIGHT_MODEL:-Qwen/Qwen2.5-14B-Instruct}"
+HEAVY_MODEL="${PROM_HEAVY_MODEL:-Qwen/Qwen2.5-32B-Instruct}"
 
-echo "Scratch dir : ${SCRATCH}"
-echo "Venv        : ${VENV}"
-echo "HF_HOME     : ${HF_HOME}"
-echo "Model       : ${MODEL}"
+echo "Scratch dir  : ${SCRATCH}"
+echo "Venv         : ${VENV}"
+echo "HF_HOME      : ${HF_HOME}"
+echo "Light model  : ${LIGHT_MODEL} (profiler/miner)"
+echo "Heavy model  : ${HEAVY_MODEL} (solver/critic)"
 
 # Redirect pip / system temp to scratch — /tmp on giano is tiny and shared,
 # which causes "No space left on device" when downloading large wheels (torch, triton).
@@ -44,7 +46,9 @@ pip3 install torch --no-cache-dir --index-url https://download.pytorch.org/whl/c
 pip3 install --no-cache-dir -r requirements.txt
 
 echo
-echo "Setup complete. The model (${MODEL}) will be downloaded automatically"
+echo "Setup complete. Both models will be downloaded automatically"
 echo "on the first job run and cached in ${HF_HOME} for subsequent runs."
+echo "  Light: ${LIGHT_MODEL} (~9 GB 4-bit)"
+echo "  Heavy: ${HEAVY_MODEL} (~20 GB 4-bit)"
 echo ""
 echo "Submit with:  sbatch job.sbatch"

@@ -23,6 +23,7 @@ from ..utils.groq_client import GroqClient
 from ..config import CONFIG
 
 OPTS = _OPTS
+OPTS_ABCD = ("A", "B", "C", "D")
 
 
 # ─────────────────────────────────────────────────────────────
@@ -257,17 +258,26 @@ class WeightedAggregator:
         solver: SolverOutput,
         critic: CriticOutput,
     ) -> AggregatorOutput:
+        # Dampen critic flips: downgrade to weaken (flips hurt accuracy).
+        if CONFIG.aggregator.dampen_flips and critic.overall_verdict == "flip":
+            critic = critic.model_copy(
+                update={"overall_verdict": "weaken",
+                        "confidence_adjustment": max(critic.confidence_adjustment, -0.15)}
+            )
+
         scores = compute_scores(profiler, miner, solver, critic)
 
-        # Boost "non determinabile" options if evidence is absent
-        if miner.evidence_coverage == "absent":
-            for opt, claim in profiler.option_claims.items():
-                if any(kw in claim.lower() for kw in
-                       ("non è possibile", "non determinabile",
-                        "insufficiente", "non disponibile", "non si può")):
-                    scores[opt] = min(1.0, scores[opt] + 0.20)
+        # Suppress E ("Nessuna delle precedenti"): redistribute its weight
+        # to A–D proportionally. In the Prometeia dataset the gold answer
+        # is never E, and the model over-predicts it when uncertain.
+        if CONFIG.aggregator.suppress_e and scores.get("E", 0) > 0:
+            e_weight = scores.pop("E")
+            abcd_total = sum(scores[o] for o in OPTS_ABCD) or 1e-9
+            for o in OPTS_ABCD:
+                scores[o] += e_weight * (scores[o] / abcd_total)
+        scores.setdefault("E", 0.0)
 
-        ranked = sorted(OPTS, key=lambda o: scores[o], reverse=True)
+        ranked = sorted(OPTS_ABCD, key=lambda o: scores[o], reverse=True)
         winner, runner_up = ranked[0], ranked[1]
         margin = scores[winner] - scores[runner_up]
         tier   = _confidence_tier(scores[winner], margin)

@@ -7,7 +7,7 @@ Two phases in one LLM call:
   Phase 2 — defend each distractor, then rebut the defense.
 
 Usage:
-    model  = get_shared_model()
+    model  = get_heavy_model()
     critic = AdversarialCritic(model)
     output = critic.run(sample, profiler_output, miner_output, solver_output)
 """

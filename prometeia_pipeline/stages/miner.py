@@ -8,7 +8,7 @@ Two internal sub-stages:
   2. LLM evidence scorer              (local model, GPU)
 
 Usage:
-    model = get_shared_model()
+    model = get_light_model()
     miner = ContextMiner(model)
     output = miner.run(sample, profiler_output)
 """

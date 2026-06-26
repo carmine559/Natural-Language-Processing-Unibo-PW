@@ -34,8 +34,10 @@ def parse_args() -> argparse.Namespace:
                     help="Predictions JSON path (default: $PROM_OUTPUT_DIR/predictions.json).")
     ap.add_argument("--limit", type=int, default=None,
                     help="Only process the first N samples (smoke test).")
-    ap.add_argument("--model", default=None,
-                    help="Override the HF model name (else picked by --partition).")
+    ap.add_argument("--light-model", default=None,
+                    help="Override the light model (profiler/miner).")
+    ap.add_argument("--heavy-model", default=None,
+                    help="Override the heavy model (solver/critic).")
     ap.add_argument("--partition", choices=["l40", "rtx2080"], default="l40",
                     help="Cluster partition; selects the default model preset.")
     ap.add_argument("--use-groq", action="store_true",
@@ -52,9 +54,11 @@ def configure(args) -> None:
     """Apply CLI args to the global CONFIG before the model is loaded."""
     from prometeia_pipeline.config import CONFIG, apply_partition_preset
 
-    apply_partition_preset(args.partition)        # respects PROM_MODEL env
-    if args.model:
-        CONFIG.model.local_model_name = args.model
+    apply_partition_preset(args.partition)
+    if args.light_model:
+        CONFIG.model.light_model_name = args.light_model
+    if args.heavy_model:
+        CONFIG.model.heavy_model_name = args.heavy_model
     CONFIG.model.use_groq = args.use_groq
 
 
@@ -101,8 +105,9 @@ def main() -> None:
     pred_path    = args.output or str(out_dir / "predictions.json")
     results_path = str(out_dir / "pipeline_results.json")
 
-    print(f"Model      : {CONFIG.model.local_model_name} (4bit={CONFIG.model.use_4bit})")
-    print(f"Device     : {CONFIG.model.gpu_device}  |  use_groq={CONFIG.model.use_groq}")
+    print(f"Light model: {CONFIG.model.light_model_name} (profiler/miner)")
+    print(f"Heavy model: {CONFIG.model.heavy_model_name} (solver/critic)")
+    print(f"Device     : {CONFIG.model.gpu_device}  |  4bit={CONFIG.model.use_4bit}  |  use_groq={CONFIG.model.use_groq}")
     print(f"Data       : {args.data}")
     print(f"Output     : {pred_path}")
 

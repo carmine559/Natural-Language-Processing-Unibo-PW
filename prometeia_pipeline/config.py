@@ -13,23 +13,32 @@ GROQ_API_KEY: str = os.environ.get("GROQ_API_KEY", "")
 # ─────────────────────────────────────────────────────────────
 #  Model presets per cluster partition.
 #  The DISI cluster gives ONE GPU per node:
-#    l40       → Nvidia L40, 48 GB  → can host a 14B (or larger) in 4-bit
-#    rtx2080   → RTX 2080 Ti, 11 GB → 14B-4bit fits but KV-cache is tight;
-#                drop to the 7B model below if you hit OOM on long contexts.
+#    l40       → Nvidia L40, 48 GB  → dual model: 14B + 32B (both 4-bit, ~32 GB)
+#    rtx2080   → RTX 2080 Ti, 11 GB → single 14B-4bit only (~9 GB)
 # ─────────────────────────────────────────────────────────────
-MODEL_PRESETS: Dict[str, str] = {
-    "l40":     "Qwen/Qwen2.5-14B-Instruct",
-    "rtx2080": "Qwen/Qwen2.5-14B-Instruct",   # OOM fallback: "Qwen/Qwen2.5-7B-Instruct"
+MODEL_PRESETS: Dict[str, Dict[str, str]] = {
+    "l40": {
+        "light": "Qwen/Qwen2.5-14B-Instruct",    # profiler + miner
+        "heavy": "Qwen/Qwen2.5-32B-Instruct",    # solver + critic
+    },
+    "rtx2080": {
+        "light": "Qwen/Qwen2.5-14B-Instruct",    # all stages (11 GB limit)
+        "heavy": "Qwen/Qwen2.5-14B-Instruct",    # same — no room for 32B
+    },
 }
 
 
 @dataclass
 class ModelConfig:
-    # Single local model shared by every stage (one GPU per node).
-    local_model_name: str = os.environ.get(
-        "PROM_MODEL", "Qwen/Qwen2.5-14B-Instruct"
+    # Light model: profiler + miner (classification / evidence scoring).
+    light_model_name: str = os.environ.get(
+        "PROM_LIGHT_MODEL", "Qwen/Qwen2.5-14B-Instruct"
     )
-    use_4bit: bool = True            # ~9 GB for 14B, ~5 GB for 7B
+    # Heavy model: solver + critic (deeper reasoning).
+    heavy_model_name: str = os.environ.get(
+        "PROM_HEAVY_MODEL", "Qwen/Qwen2.5-32B-Instruct"
+    )
+    use_4bit: bool = True            # ~9 GB for 14B, ~20 GB for 32B
     bnb_compute_dtype: str = "float16"
 
     # The cluster exposes exactly one GPU per job (--gres=gpu:1).
@@ -74,6 +83,14 @@ class AggregatorConfig:
     tiebreak_confidence_threshold: float = 0.65
     miner_gap_for_fallback: float = 0.08   # priority 2 in fallback chain
 
+    # E suppression: in the Prometeia dataset the gold answer is never E.
+    # When True, E's score is redistributed to A–D proportionally.
+    suppress_e: bool = True
+
+    # Critic flip dampening: flips hurt accuracy (42% vs 66% for weaken).
+    # When True, flip verdicts are downgraded to weaken.
+    dampen_flips: bool = True
+
 
 @dataclass
 class PipelineConfig:
@@ -111,10 +128,10 @@ CONFIG = PipelineConfig()
 
 
 def apply_partition_preset(partition: str) -> None:
-    """Pick the model for a given cluster partition (l40 / rtx2080),
-    unless PROM_MODEL / --model already forced a specific one."""
-    if os.environ.get("PROM_MODEL"):
-        return
-    name = MODEL_PRESETS.get(partition)
-    if name:
-        CONFIG.model.local_model_name = name
+    """Pick models for a given cluster partition (l40 / rtx2080),
+    unless env vars already forced specific ones."""
+    preset = MODEL_PRESETS.get(partition, {})
+    if not os.environ.get("PROM_LIGHT_MODEL") and "light" in preset:
+        CONFIG.model.light_model_name = preset["light"]
+    if not os.environ.get("PROM_HEAVY_MODEL") and "heavy" in preset:
+        CONFIG.model.heavy_model_name = preset["heavy"]

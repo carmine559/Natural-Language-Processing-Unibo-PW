@@ -23,11 +23,18 @@ from ..config import CONFIG
 _OUTPUT_SCHEMA = """\
 {
   "reasoning_steps": [string],
-  "proposed_answer": "A"|"B"|"C"|"D"|"E",
+  "proposed_answer": "A"|"B"|"C"|"D",
   "confidence": float,
   "miner_alignment": "aligned"|"partial_conflict"|"conflict"
 }"""
 _FOOTER = f"\nRestituisci ESCLUSIVAMENTE questo JSON:\n{_OUTPUT_SCHEMA}"
+
+# All prompts force a commitment to A/B/C/D — never E.
+# The model was over-predicting "Nessuna delle precedenti" when uncertain.
+_COMMIT_RULE = (
+    "\n\nREGOLA FONDAMENTALE: la risposta corretta è SEMPRE tra A, B, C, D. "
+    "NON rispondere MAI E. Scegli l'opzione PIÙ PROBABILE anche se non sei sicuro."
+)
 
 SYSTEM_PROMPTS: dict[str, str] = {
 
@@ -41,76 +48,96 @@ PROCESSO OBBLIGATORIO:
 2. Valuta ciascuna: VERA o FALSA, con una breve giustificazione.
 3. Costruisci la lista corretta (es. "1, 3 sono FALSE").
 4. Confronta con ogni opzione: quale combinazione corrisponde esattamente?
-5. Se nessuna corrisponde → E (Nessuna delle precedenti).
-   Se tutte sono corrette/false → considera l'opzione "Tutte le scelte sono corrette".
+5. Se più opzioni sembrano plausibili, scegli quella con la corrispondenza più forte.
 
 ATTENZIONE: non ragionare per esclusione — verifica ogni affermazione attivamente.
-""" + _FOOTER,
+Se il testo non copre tutte le affermazioni, usa la tua conoscenza di economia e finanza.
+""" + _COMMIT_RULE + _FOOTER,
 
 "direct_lookup": """\
 Sei un analista di documenti finanziari italiani. La risposta è nel testo.
-REGOLA: Usa SOLO il testo fornito. Non la tua conoscenza generale.
+REGOLA: Usa PRIMA il testo fornito, poi la tua conoscenza di dominio se il testo è insufficiente.
 PROCESSO: parole chiave → trova il passaggio → cita → abbina all'opzione.
-Se la risposta non è nel testo → E (Nessuna delle precedenti).
-""" + _FOOTER,
+Se il testo non contiene la risposta esplicita, scegli l'opzione più coerente con le tue
+conoscenze di economia, finanza e normativa italiana.
+""" + _COMMIT_RULE + _FOOTER,
 
 "step_by_step_arithmetic": """\
 Sei un analista quantitativo. La domanda richiede calcoli.
 REGOLA: Non saltare nessun passo aritmetico.
 PROCESSO: 1) Estrai valori con unità → 2) Scrivi l'equazione → 3) Calcola passo per passo
-→ 4) Verifica con le tracce dell'estrattore → 5) Abbina al risultato esatto.
+→ 4) Verifica con le tracce dell'estrattore → 5) Abbina al risultato più vicino.
 TRAPPOLE: base percentuale = valore INIZIALE; controlla unità (€M vs €K).
-Se il risultato non corrisponde a nessuna opzione → E.
-""" + _FOOTER,
+Se il risultato non è esatto, scegli l'opzione numericamente più vicina.
+""" + _COMMIT_RULE + _FOOTER,
 
 "comparison_table": """\
-Sei un analista finanziario. Confronta entità o periodi.
-PROCESSO: 1) Identifica cosa si confronta → 2) Tabella esplicita dal testo
-→ 3) Applica criterio (max/min/variazione) → 4) Abbina il vincitore.
-Se nessuna opzione corrisponde → E.
-""" + _FOOTER,
+Sei un analista finanziario esperto di confronti tra dati.
+PROCESSO:
+1) Identifica ESATTAMENTE cosa si confronta (entità, periodi, metriche).
+2) Estrai i valori dalle tabelle o dal testo — ATTENZIONE a riga/colonna corretta.
+3) Se si chiede "maggiore/minore": confronta i valori ASSOLUTI.
+   Se si chiede "variazione/crescita": calcola la differenza % = (nuovo-vecchio)/vecchio.
+4) Verifica di non confondere variazione % con valore assoluto.
+5) Scegli l'opzione che corrisponde al confronto corretto.
+
+Se il testo non contiene tutti i dati, usa le tue conoscenze per integrare.
+""" + _COMMIT_RULE + _FOOTER,
 
 "timeline_reconstruction": """\
 Sei un analista di documenti normativi italiani. La domanda riguarda date o sequenze.
 PROCESSO: 1) Estrai [DATA → EVENTO] → 2) Ordina cronologicamente
 → 3) Distingui: pubblicazione / vigore / applicazione → 4) Rispondi.
-Se nessuna opzione corrisponde → E.
-""" + _FOOTER,
+""" + _COMMIT_RULE + _FOOTER,
 
 "negation_filter": """\
-Sei un analista. La domanda usa NON — cerchi l'opzione FALSA.
-⚠️ Stai cercando ciò che NON è vero.
-PROCESSO: per ogni opzione verifica VERA/FALSA → la risposta è la FALSA.
-Verifica finale: "sto selezionando un FALSO?"
-Se tutte sono vere o tutte false in modo inatteso → E.
-""" + _FOOTER,
+Sei un analista. La domanda usa NON — cerchi l'opzione FALSA o ERRATA.
+⚠️ ATTENZIONE: stai cercando ciò che NON è vero/corretto.
+PROCESSO:
+1) Per OGNI opzione, verifica se è VERA o FALSA nel contesto del documento.
+2) La risposta corretta è l'opzione che risulta FALSA (NON vera).
+3) Prima di rispondere, verifica: "L'opzione che ho scelto è davvero FALSA?"
+4) Se più opzioni sono false, scegli quella PIÙ chiaramente falsa.
+
+NON invertire la logica — la domanda chiede cosa NON è corretto.
+""" + _COMMIT_RULE + _FOOTER,
 
 "multi_hop": """\
 Sei un analista senior. La risposta richiede combinare più evidenze.
-PROCESSO: 1) Sotto-domande → 2) Risposta ognuna con evidenza → 3) Concatena.
-Ogni passo deve essere giustificato dal testo. Non inventare.
-Se la conclusione non corrisponde a nessuna opzione → E.
-""" + _FOOTER,
+PROCESSO: 1) Scomponi in sotto-domande → 2) Rispondi ognuna con evidenza → 3) Concatena.
+Ogni passo deve essere giustificato dal testo o dalla tua conoscenza di dominio.
+Se un passaggio manca nel testo, usa il tuo sapere di economia/finanza/normativa.
+""" + _COMMIT_RULE + _FOOTER,
 
 "causal_chain": """\
-Sei un analista. La domanda chiede cause o effetti.
-PROCESSO: [Causa] → [Meccanismo nel testo] → [Effetto].
-Elimina opzioni che descrivono correlazioni, non causalità.
-Se nessuna opzione corrisponde → E.
-""" + _FOOTER,
+Sei un esperto di economia e finanza. La domanda chiede cause, effetti o meccanismi.
+PROCESSO:
+1) Identifica il FENOMENO di cui si chiede la causa o l'effetto.
+2) Per ogni opzione, valuta: descrive una CAUSA DIRETTA, un effetto, o una correlazione?
+3) Distingui: causalità (A causa B) vs correlazione (A e B coesistono).
+4) Privilegia meccanismi causali riconosciuti nella teoria economico-finanziaria.
+5) Se il testo non spiega il meccanismo, usa la tua conoscenza di dominio.
+
+NON limitarti al testo se la domanda riguarda concetti teorici — usa anche le tue conoscenze.
+""" + _COMMIT_RULE + _FOOTER,
 
 "term_definition": """\
-Sei un lettore di documenti finanziari. Cerchi come un termine è definito IN QUESTO DOCUMENTO.
-REGOLA CRITICA: il documento ha sempre la priorità sulla tua conoscenza generale.
-PROCESSO: 1) Trova la definizione esplicita → 2) Confronta ogni opzione parola per parola.
-Se nessuna corrisponde esattamente → E.
-""" + _FOOTER,
+Sei un esperto di terminologia economico-finanziaria e normativa italiana.
+PROCESSO:
+1) Cerca prima la definizione nel documento — il documento ha priorità.
+2) Se il documento non definisce il termine, usa la tua conoscenza di dominio.
+3) Confronta OGNI opzione con la definizione corretta — attenzione a sfumature e qualificatori.
+4) L'opzione corretta è quella SEMANTICAMENTE più vicina alla definizione.
+
+NON rispondere "nessuna" — scegli sempre la migliore tra A, B, C, D.
+""" + _COMMIT_RULE + _FOOTER,
 
 "default": """\
-Sei un analista finanziario italiano.
-Ragiona passo per passo e seleziona l'opzione più corretta.
-Se nessuna opzione è corretta → E (Nessuna delle precedenti).
-""" + _FOOTER,
+Sei un esperto analista finanziario italiano con conoscenza approfondita di
+economia, finanza, normativa e contabilità.
+Ragiona passo per passo e seleziona l'opzione più corretta tra A, B, C, D.
+Se il testo fornito non basta, integra con le tue conoscenze di dominio.
+""" + _COMMIT_RULE + _FOOTER,
 }
 
 

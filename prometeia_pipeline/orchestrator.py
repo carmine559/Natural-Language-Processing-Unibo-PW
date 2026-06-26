@@ -24,7 +24,7 @@ from .stages.miner      import ContextMiner, _fallback_miner
 from .stages.solver     import SpecialistSolver
 from .stages.critic     import AdversarialCritic, _fallback_critic
 from .stages.aggregator import WeightedAggregator
-from .utils.model_loader import get_shared_model
+from .utils.model_loader import get_light_model, get_heavy_model
 from .utils.local_chat   import LocalChatClient
 from .config import CONFIG
 
@@ -33,19 +33,22 @@ class PrometeiaPipeline:
     """
     Full pipeline: load once, call run_batch() for inference.
 
-    Instantiation loads the shared model once (a few minutes the first time,
-    including any model download into HF_HOME).
+    On the L40 two models are loaded:
+      light (14B) → profiler + miner (classification / evidence)
+      heavy (32B) → solver + critic  (deeper reasoning)
+    On the RTX 2080 Ti both point to the same 14B instance.
     """
 
     def __init__(self, groq_api_key: Optional[str] = None):
-        print(f"Loading model {CONFIG.model.local_model_name} "
-              f"on {CONFIG.model.gpu_device} ...")
+        print(f"Loading models on {CONFIG.model.gpu_device} ...")
+        print(f"  Light (profiler/miner): {CONFIG.model.light_model_name}")
+        print(f"  Heavy (solver/critic) : {CONFIG.model.heavy_model_name}")
         t0 = time.time()
 
-        # One shared model on the single GPU, used by every local stage.
-        model = get_shared_model()
+        light_model = get_light_model()
+        heavy_model = get_heavy_model()
 
-        # Solver + aggregator client: Groq (optional) or the local model.
+        # Solver + aggregator client: Groq (optional) or the heavy local model.
         if CONFIG.model.use_groq:
             import os
             from .utils.groq_client import GroqClient
@@ -53,13 +56,13 @@ class PrometeiaPipeline:
             self.chat_client = GroqClient(api_key=key)
             print("Solver/tiebreaker: Groq cloud API")
         else:
-            self.chat_client = LocalChatClient(model)
-            print("Solver/tiebreaker: local model")
+            self.chat_client = LocalChatClient(heavy_model)
+            print("Solver/tiebreaker: heavy local model")
 
-        self.profiler   = QuestionProfiler(model)
-        self.miner      = ContextMiner(model)
+        self.profiler   = QuestionProfiler(light_model)
+        self.miner      = ContextMiner(light_model)
         self.solver     = SpecialistSolver(self.chat_client)
-        self.critic     = AdversarialCritic(model)
+        self.critic     = AdversarialCritic(heavy_model)
         self.aggregator = WeightedAggregator(self.chat_client)
 
         print(f"All models ready in {time.time()-t0:.0f}s.")
