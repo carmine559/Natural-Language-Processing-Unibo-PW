@@ -1,0 +1,472 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Model      : Qwen/Qwen2.5-14B-Instruct (4bit=True)
+Device     : cuda:0  |  use_groq=False
+Data       : data/validation_set_IT.tsv
+Output     : /scratch.hpc/carmine.santella/Natural-Language-Processing-Unibo-PW/outputs/predictions.json
+Loaded 500 samples from validation_set_IT.tsv
+  category: {'BOOKS': 164, 'PAPER': 161, 'FINANCIALS': 175}
+  labelled: 500 / 500
+Loading model Qwen/Qwen2.5-14B-Instruct on cuda:0 ...
+Loading Qwen/Qwen2.5-14B-Instruct on cuda:0 ...
+Loading weights:   0%|          | 0/579 [00:00<?, ?it/s]Loading weights:   0%|          | 1/579 [00:09<1:30:50,  9.43s/it]Loading weights:   0%|          | 2/579 [00:22<1:50:55, 11.53s/it]Loading weights:   1%|          | 4/579 [00:24<48:01,  5.01s/it]  Loading weights:   1%|          | 5/579 [00:26<37:13,  3.89s/it]Loading weights:   1%|          | 6/579 [00:26<27:56,  2.93s/it]Loading weights:   2%|▏         | 10/579 [00:27<10:36,  1.12s/it]Loading weights:   2%|▏         | 12/579 [00:27<07:39,  1.23it/s]Loading weights:   3%|▎         | 16/579 [00:27<04:34,  2.05it/s]Loading weights:   3%|▎         | 17/579 [00:28<04:50,  1.94it/s]Loading weights:   3%|▎         | 18/579 [00:29<06:02,  1.55it/s]Loading weights:   4%|▎         | 21/579 [00:30<03:37,  2.57it/s]Loading weights:   4%|▍         | 23/579 [00:30<02:54,  3.18it/s]Loading weights:   4%|▍         | 24/579 [00:30<03:08,  2.95it/s]Loading weights:   5%|▍         | 28/579 [00:31<02:15,  4.07it/s]Loading weights:   5%|▌         | 29/579 [00:32<03:09,  2.89it/s]Loading weights:   5%|▌         | 30/579 [00:33<04:55,  1.86it/s]Loading weights:   6%|▌         | 33/579 [00:33<03:01,  3.01it/s]Loading weights:   6%|▌         | 34/579 [00:34<03:25,  2.65it/s]Loading weights:   6%|▌         | 36/579 [00:34<02:57,  3.06it/s]Loading weights:   7%|▋         | 40/579 [00:36<03:03,  2.93it/s]Loading weights:   7%|▋         | 41/579 [00:36<03:08,  2.85it/s]Loading weights:   7%|▋         | 42/579 [00:37<03:34,  2.51it/s]Loading weights:   8%|▊         | 46/579 [00:37<02:02,  4.36it/s]Loading weights:   8%|▊         | 48/579 [00:37<01:39,  5.36it/s]Loading weights:   9%|▉         | 52/579 [00:39<02:26,  3.60it/s]Loading weights:   9%|▉         | 53/579 [00:40<03:38,  2.41it/s]Loading weights:   9%|▉         | 54/579 [00:41<04:15,  2.06it/s]Loading weights:  10%|▉         | 57/579 [00:41<02:42,  3.21it/s]Loading weights:  10%|█         | 58/579 [00:42<02:54,  2.98it/s]Loading weights:  10%|█         | 60/579 [00:42<02:22,  3.65it/s]Loading weights:  11%|█         | 64/579 [00:43<02:50,  3.03it/s]Loading weights:  11%|█         | 65/579 [00:45<04:04,  2.11it/s]Loading weights:  11%|█▏        | 66/579 [00:46<05:48,  1.47it/s]Loading weights:  12%|█▏        | 69/579 [00:47<03:29,  2.44it/s]Loading weights:  12%|█▏        | 70/579 [00:47<03:48,  2.23it/s]Loading weights:  12%|█▏        | 72/579 [00:47<02:52,  2.94it/s]Loading weights:  13%|█▎        | 76/579 [00:48<02:11,  3.83it/s]Loading weights:  13%|█▎        | 77/579 [00:49<02:33,  3.27it/s]Loading weights:  13%|█▎        | 78/579 [00:50<03:24,  2.45it/s]Loading weights:  14%|█▍        | 82/579 [00:50<01:58,  4.19it/s]Loading weights:  15%|█▍        | 84/579 [00:50<01:41,  4.87it/s]Loading weights:  15%|█▌        | 88/579 [00:51<01:46,  4.59it/s]Loading weights:  15%|█▌        | 89/579 [00:52<02:34,  3.18it/s]Loading weights:  16%|█▌        | 90/579 [00:53<02:51,  2.86it/s]Loading weights:  16%|█▌        | 94/579 [00:53<01:39,  4.85it/s]Loading weights:  17%|█▋        | 96/579 [00:53<01:22,  5.87it/s]Loading weights:  17%|█▋        | 100/579 [00:53<01:12,  6.62it/s]Loading weights:  18%|█▊        | 102/579 [00:55<02:05,  3.81it/s]Loading weights:  18%|█▊        | 105/579 [00:55<01:28,  5.35it/s]Loading weights:  18%|█▊        | 107/579 [00:55<01:39,  4.76it/s]Loading weights:  19%|█▉        | 109/579 [00:56<01:29,  5.26it/s]Loading weights:  19%|█▉        | 112/579 [00:56<01:20,  5.83it/s]Loading weights:  20%|█▉        | 113/579 [00:56<01:38,  4.72it/s]Loading weights:  20%|█▉        | 114/579 [00:57<02:08,  3.62it/s]Loading weights:  20%|██        | 118/579 [00:57<01:15,  6.10it/s]Loading weights:  21%|██        | 120/579 [00:58<01:18,  5.82it/s]Loading weights:  21%|██▏       | 124/579 [00:59<01:54,  3.99it/s]Loading weights:  22%|██▏       | 125/579 [01:00<02:10,  3.48it/s]Loading weights:  22%|██▏       | 126/579 [01:01<03:25,  2.20it/s]Loading weights:  22%|██▏       | 130/579 [01:01<02:13,  3.36it/s]Loading weights:  23%|██▎       | 132/579 [01:02<01:49,  4.09it/s]Loading weights:  23%|██▎       | 136/579 [01:02<01:40,  4.41it/s]Loading weights:  24%|██▎       | 137/579 [01:03<02:16,  3.23it/s]Loading weights:  24%|██▍       | 138/579 [01:04<02:42,  2.71it/s]Loading weights:  25%|██▍       | 142/579 [01:04<01:44,  4.20it/s]Loading weights:  25%|██▍       | 144/579 [01:04<01:23,  5.19it/s]Loading weights:  26%|██▌       | 148/579 [01:06<01:51,  3.86it/s]Loading weights:  26%|██▌       | 149/579 [01:07<02:44,  2.61it/s]Loading weights:  26%|██▌       | 150/579 [01:08<03:39,  1.96it/s]Loading weights:  26%|██▋       | 153/579 [01:08<02:16,  3.13it/s]Loading weights:  27%|██▋       | 155/579 [01:09<01:48,  3.90it/s]Loading weights:  27%|██▋       | 157/579 [01:09<01:36,  4.37it/s]Loading weights:  28%|██▊       | 160/579 [01:09<01:28,  4.73it/s]Loading weights:  28%|██▊       | 161/579 [01:10<01:53,  3.68it/s]Loading weights:  28%|██▊       | 162/579 [01:11<02:24,  2.88it/s]Loading weights:  29%|██▊       | 166/579 [01:11<01:21,  5.04it/s]Loading weights:  29%|██▉       | 168/579 [01:11<01:24,  4.88it/s]Loading weights:  29%|██▉       | 170/579 [01:11<01:06,  6.12it/s]Loading weights:  30%|██▉       | 172/579 [01:13<01:54,  3.56it/s]Loading weights:  30%|██▉       | 173/579 [01:13<02:11,  3.08it/s]Loading weights:  30%|███       | 174/579 [01:14<02:15,  2.99it/s]Loading weights:  31%|███       | 178/579 [01:14<01:13,  5.49it/s]Loading weights:  31%|███       | 180/579 [01:14<01:16,  5.25it/s]Loading weights:  32%|███▏      | 184/579 [01:16<01:50,  3.57it/s]Loading weights:  32%|███▏      | 185/579 [01:17<02:27,  2.68it/s]Loading weights:  32%|███▏      | 186/579 [01:17<02:39,  2.47it/s]Loading weights:  33%|███▎      | 190/579 [01:18<01:35,  4.09it/s]Loading weights:  33%|███▎      | 192/579 [01:18<01:32,  4.19it/s]Loading weights:  34%|███▎      | 194/579 [01:18<01:13,  5.27it/s]Loading weights:  34%|███▍      | 196/579 [01:19<01:58,  3.23it/s]Loading weights:  34%|███▍      | 197/579 [01:21<02:55,  2.17it/s]Loading weights:  34%|███▍      | 198/579 [01:22<03:47,  1.67it/s]Loading weights:  35%|███▍      | 202/579 [01:22<01:57,  3.20it/s]Loading weights:  35%|███▌      | 204/579 [01:22<01:32,  4.05it/s]Loading weights:  36%|███▌      | 208/579 [01:23<01:34,  3.94it/s]Loading weights:  36%|███▌      | 209/579 [01:24<01:44,  3.55it/s]Loading weights:  36%|███▋      | 210/579 [01:24<01:56,  3.18it/s]Loading weights:  37%|███▋      | 214/579 [01:24<01:07,  5.44it/s]Loading weights:  37%|███▋      | 216/579 [01:25<01:18,  4.62it/s]Loading weights:  38%|███▊      | 220/579 [01:26<01:31,  3.92it/s]Loading weights:  38%|███▊      | 221/579 [01:27<01:59,  2.99it/s]Loading weights:  38%|███▊      | 222/579 [01:28<02:25,  2.45it/s]Loading weights:  39%|███▉      | 226/579 [01:28<01:24,  4.18it/s]Loading weights:  39%|███▉      | 228/579 [01:28<01:12,  4.81it/s]Loading weights:  40%|████      | 232/579 [01:29<01:21,  4.27it/s]Loading weights:  40%|████      | 233/579 [01:30<01:41,  3.41it/s]Loading weights:  40%|████      | 234/579 [01:30<01:50,  3.13it/s]Loading weights:  41%|████      | 238/579 [01:31<01:19,  4.27it/s]Loading weights:  41%|████▏     | 240/579 [01:31<01:07,  5.03it/s]Loading weights:  42%|████▏     | 244/579 [01:32<01:16,  4.38it/s]Loading weights:  42%|████▏     | 245/579 [01:33<01:56,  2.87it/s]Loading weights:  42%|████▏     | 246/579 [01:34<02:00,  2.76it/s]Loading weights:  43%|████▎     | 250/579 [01:34<01:09,  4.72it/s]Loading weights:  44%|████▎     | 252/579 [01:34<00:57,  5.67it/s]Loading weights:  44%|████▍     | 256/579 [01:35<01:09,  4.66it/s]Loading weights:  44%|████▍     | 257/579 [01:36<01:44,  3.07it/s]Loading weights:  45%|████▍     | 258/579 [01:38<02:30,  2.13it/s]Loading weights:  45%|████▌     | 261/579 [01:38<01:37,  3.26it/s]Loading weights:  45%|████▌     | 262/579 [01:38<01:44,  3.02it/s]Loading weights:  46%|████▌     | 264/579 [01:39<01:31,  3.43it/s]Loading weights:  46%|████▋     | 268/579 [01:39<01:10,  4.44it/s]Loading weights:  46%|████▋     | 269/579 [01:40<01:19,  3.89it/s]Loading weights:  47%|████▋     | 270/579 [01:40<01:42,  3.01it/s]Loading weights:  47%|████▋     | 274/579 [01:41<01:10,  4.32it/s]Loading weights:  48%|████▊     | 276/579 [01:41<01:03,  4.75it/s]Loading weights:  48%|████▊     | 280/579 [01:43<01:19,  3.74it/s]Loading weights:  49%|████▊     | 281/579 [01:43<01:31,  3.26it/s]Loading weights:  49%|████▊     | 282/579 [01:44<01:41,  2.92it/s]Loading weights:  49%|████▉     | 286/579 [01:44<00:59,  4.92it/s]Loading weights:  50%|████▉     | 288/579 [01:44<00:50,  5.73it/s]Loading weights:  50%|█████     | 292/579 [01:44<00:41,  6.87it/s]Loading weights:  51%|█████     | 293/579 [01:45<01:09,  4.09it/s]Loading weights:  51%|█████     | 294/579 [01:46<01:34,  3.02it/s]Loading weights:  51%|█████▏    | 298/579 [01:46<00:55,  5.05it/s]Loading weights:  52%|█████▏    | 300/579 [01:47<00:48,  5.80it/s]Loading weights:  53%|█████▎    | 304/579 [01:47<00:41,  6.62it/s]Loading weights:  53%|█████▎    | 305/579 [01:48<01:19,  3.46it/s]Loading weights:  53%|█████▎    | 306/579 [01:49<01:41,  2.68it/s]Loading weights:  54%|█████▎    | 310/579 [01:49<00:59,  4.54it/s]Loading weights:  54%|█████▍    | 312/579 [01:49<00:48,  5.52it/s]Loading weights:  55%|█████▍    | 316/579 [01:50<00:51,  5.08it/s]Loading weights:  55%|█████▍    | 317/579 [01:51<01:20,  3.25it/s]Loading weights:  55%|█████▍    | 318/579 [01:52<01:45,  2.47it/s]Loading weights:  55%|█████▌    | 321/579 [01:52<01:06,  3.89it/s]Loading weights:  56%|█████▌    | 323/579 [01:53<01:00,  4.23it/s]Loading weights:  56%|█████▌    | 324/579 [01:53<01:00,  4.20it/s]Loading weights:  57%|█████▋    | 328/579 [01:54<00:52,  4.79it/s]Loading weights:  57%|█████▋    | 329/579 [01:54<01:01,  4.09it/s]Loading weights:  57%|█████▋    | 330/579 [01:55<01:17,  3.23it/s]Loading weights:  58%|█████▊    | 333/579 [01:55<00:47,  5.18it/s]Loading weights:  58%|█████▊    | 335/579 [01:55<00:49,  4.89it/s]Loading weights:  58%|█████▊    | 336/579 [01:56<00:51,  4.68it/s]Loading weights:  59%|█████▊    | 340/579 [01:56<00:48,  4.91it/s]Loading weights:  59%|█████▉    | 341/579 [01:57<01:16,  3.12it/s]Loading weights:  59%|█████▉    | 342/579 [01:58<01:20,  2.94it/s]Loading weights:  60%|█████▉    | 346/579 [01:58<00:47,  4.92it/s]Loading weights:  60%|██████    | 348/579 [01:59<00:50,  4.55it/s]Loading weights:  60%|██████    | 350/579 [01:59<00:39,  5.74it/s]Loading weights:  61%|██████    | 352/579 [02:00<01:06,  3.44it/s]Loading weights:  61%|██████    | 353/579 [02:01<01:30,  2.49it/s]Loading weights:  61%|██████    | 354/579 [02:02<01:53,  1.99it/s]Loading weights:  62%|██████▏   | 358/579 [02:02<00:58,  3.79it/s]Loading weights:  62%|██████▏   | 360/579 [02:02<00:46,  4.67it/s]Loading weights:  63%|██████▎   | 364/579 [02:03<00:44,  4.82it/s]Loading weights:  63%|██████▎   | 365/579 [02:04<00:57,  3.71it/s]Loading weights:  63%|██████▎   | 366/579 [02:05<01:21,  2.61it/s]Loading weights:  64%|██████▍   | 370/579 [02:05<00:52,  3.95it/s]Loading weights:  64%|██████▍   | 372/579 [02:05<00:49,  4.19it/s]Loading weights:  65%|██████▍   | 376/579 [02:06<00:41,  4.91it/s]Loading weights:  65%|██████▌   | 377/579 [02:07<00:54,  3.71it/s]Loading weights:  65%|██████▌   | 378/579 [02:07<00:57,  3.50it/s]Loading weights:  66%|██████▌   | 382/579 [02:07<00:33,  5.84it/s]Loading weights:  66%|██████▋   | 384/579 [02:07<00:28,  6.74it/s]Loading weights:  67%|██████▋   | 388/579 [02:08<00:24,  7.79it/s]Loading weights:  67%|██████▋   | 390/579 [02:09<00:53,  3.54it/s]Loading weights:  68%|██████▊   | 394/579 [02:10<00:35,  5.20it/s]Loading weights:  68%|██████▊   | 396/579 [02:10<00:30,  5.96it/s]Loading weights:  69%|██████▉   | 400/579 [02:11<00:39,  4.48it/s]Loading weights:  69%|██████▉   | 401/579 [02:12<00:52,  3.41it/s]Loading weights:  69%|██████▉   | 402/579 [02:12<00:59,  2.98it/s]Loading weights:  70%|██████▉   | 405/579 [02:13<00:38,  4.49it/s]Loading weights:  70%|███████   | 407/579 [02:13<00:39,  4.39it/s]Loading weights:  70%|███████   | 408/579 [02:13<00:44,  3.84it/s]Loading weights:  71%|███████   | 412/579 [02:14<00:34,  4.80it/s]Loading weights:  71%|███████▏  | 413/579 [02:15<00:52,  3.15it/s]Loading weights:  72%|███████▏  | 414/579 [02:16<01:12,  2.27it/s]Loading weights:  72%|███████▏  | 418/579 [02:17<00:46,  3.44it/s]Loading weights:  73%|███████▎  | 420/579 [02:17<00:36,  4.31it/s]Loading weights:  73%|███████▎  | 424/579 [02:17<00:32,  4.75it/s]Loading weights:  73%|███████▎  | 425/579 [02:18<00:38,  4.00it/s]Loading weights:  74%|███████▎  | 426/579 [02:18<00:42,  3.58it/s]Loading weights:  74%|███████▍  | 430/579 [02:19<00:27,  5.35it/s]Loading weights:  75%|███████▍  | 432/579 [02:19<00:28,  5.20it/s]Loading weights:  75%|███████▌  | 436/579 [02:20<00:35,  3.99it/s]Loading weights:  75%|███████▌  | 437/579 [02:21<00:41,  3.41it/s]Loading weights:  76%|███████▌  | 438/579 [02:22<00:48,  2.91it/s]Loading weights:  76%|███████▋  | 442/579 [02:22<00:28,  4.76it/s]Loading weights:  77%|███████▋  | 444/579 [02:22<00:24,  5.55it/s]Loading weights:  77%|███████▋  | 448/579 [02:23<00:27,  4.76it/s]Loading weights:  78%|███████▊  | 449/579 [02:24<00:39,  3.32it/s]Loading weights:  78%|███████▊  | 450/579 [02:25<00:51,  2.49it/s]Loading weights:  78%|███████▊  | 453/579 [02:25<00:32,  3.91it/s]Loading weights:  79%|███████▊  | 455/579 [02:25<00:27,  4.43it/s]Loading weights:  79%|███████▉  | 456/579 [02:26<00:27,  4.53it/s]Loading weights:  79%|███████▉  | 460/579 [02:26<00:25,  4.74it/s]Loading weights:  80%|███████▉  | 461/579 [02:28<00:46,  2.54it/s]Loading weights:  80%|███████▉  | 462/579 [02:29<01:01,  1.91it/s]Loading weights:  80%|████████  | 465/579 [02:29<00:36,  3.10it/s]Loading weights:  80%|████████  | 466/579 [02:30<00:39,  2.85it/s]Loading weights:  81%|████████  | 468/579 [02:30<00:33,  3.28it/s]Loading weights:  81%|████████  | 470/579 [02:30<00:24,  4.43it/s]Loading weights:  82%|████████▏ | 472/579 [02:31<00:24,  4.36it/s]Loading weights:  82%|████████▏ | 473/579 [02:32<00:37,  2.86it/s]Loading weights:  82%|████████▏ | 474/579 [02:33<00:55,  1.89it/s]Loading weights:  83%|████████▎ | 478/579 [02:33<00:30,  3.35it/s]Loading weights:  83%|████████▎ | 480/579 [02:33<00:25,  3.89it/s]Loading weights:  84%|████████▎ | 484/579 [02:35<00:25,  3.78it/s]Loading weights:  84%|████████▍ | 485/579 [02:36<00:34,  2.74it/s]Loading weights:  84%|████████▍ | 486/579 [02:36<00:42,  2.19it/s]Loading weights:  85%|████████▍ | 490/579 [02:37<00:26,  3.36it/s]Loading weights:  85%|████████▍ | 492/579 [02:37<00:20,  4.17it/s]Loading weights:  86%|████████▌ | 496/579 [02:38<00:19,  4.23it/s]Loading weights:  86%|████████▌ | 497/579 [02:39<00:27,  3.00it/s]Loading weights:  86%|████████▌ | 498/579 [02:41<00:42,  1.92it/s]Loading weights:  87%|████████▋ | 502/579 [02:41<00:26,  2.96it/s]Loading weights:  87%|████████▋ | 504/579 [02:41<00:20,  3.65it/s]Loading weights:  88%|████████▊ | 508/579 [02:42<00:15,  4.55it/s]Loading weights:  88%|████████▊ | 509/579 [02:42<00:19,  3.60it/s]Loading weights:  88%|████████▊ | 510/579 [02:44<00:32,  2.14it/s]Loading weights:  89%|████████▊ | 513/579 [02:44<00:19,  3.36it/s]Loading weights:  89%|████████▉ | 514/579 [02:44<00:18,  3.48it/s]Loading weights:  89%|████████▉ | 516/579 [02:45<00:16,  3.91it/s]Loading weights:  89%|████████▉ | 518/579 [02:45<00:11,  5.20it/s]Loading weights:  90%|████████▉ | 520/579 [02:46<00:19,  2.97it/s]Loading weights:  90%|████████▉ | 521/579 [02:47<00:20,  2.80it/s]Loading weights:  90%|█████████ | 522/579 [02:47<00:23,  2.43it/s]Loading weights:  91%|█████████ | 526/579 [02:47<00:11,  4.69it/s]Loading weights:  91%|█████████ | 528/579 [02:48<00:09,  5.62it/s]Loading weights:  92%|█████████▏| 532/579 [02:49<00:10,  4.63it/s]Loading weights:  92%|█████████▏| 533/579 [02:50<00:16,  2.77it/s]Loading weights:  92%|█████████▏| 534/579 [02:51<00:21,  2.13it/s]Loading weights:  93%|█████████▎| 538/579 [02:51<00:12,  3.40it/s]Loading weights:  93%|█████████▎| 540/579 [02:52<00:12,  3.24it/s]Loading weights:  94%|█████████▎| 542/579 [02:52<00:09,  4.08it/s]Loading weights:  94%|█████████▍| 544/579 [02:54<00:13,  2.57it/s]Loading weights:  94%|█████████▍| 545/579 [02:55<00:18,  1.88it/s]Loading weights:  94%|█████████▍| 546/579 [02:56<00:22,  1.48it/s]Loading weights:  95%|█████████▍| 550/579 [02:57<00:11,  2.47it/s]Loading weights:  95%|█████████▌| 552/579 [02:57<00:09,  2.81it/s]Loading weights:  96%|█████████▌| 556/579 [02:58<00:05,  3.97it/s]Loading weights:  96%|█████████▌| 557/579 [02:59<00:07,  2.97it/s]Loading weights:  96%|█████████▋| 558/579 [03:00<00:09,  2.23it/s]Loading weights:  97%|█████████▋| 562/579 [03:00<00:05,  3.37it/s]Loading weights:  97%|█████████▋| 564/579 [03:01<00:04,  3.53it/s]Loading weights:  98%|█████████▊| 568/579 [03:02<00:03,  3.12it/s]Loading weights:  98%|█████████▊| 569/579 [03:04<00:04,  2.13it/s]Loading weights:  98%|█████████▊| 570/579 [03:04<00:04,  2.00it/s]Loading weights:  99%|█████████▉| 574/579 [03:05<00:01,  3.07it/s]Loading weights:  99%|█████████▉| 576/579 [03:05<00:00,  3.75it/s]Loading weights: 100%|██████████| 579/579 [03:05<00:00,  3.12it/s]
+  Model loaded. VRAM used: 10.0 GB
+Solver/tiebreaker: local model
+All models ready in 196s.
+Resuming — 200 done, 300 remaining.
+  [Critic] WARN: PAPER__3428: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il solutore ha invertito la negazione nella domanda, interpretando erroneamente le affermazioni come vere quando dovrebbero essere false o viceversa.",\n    "counterargument_type": "negation_inversion",\n    "counterargument_strength": "stro'
+  [PAPER__3428] type=statement_combination solver=C(0.95) critic=confirm final=C tier=high
+  [FINANCIALS__3798] type=comparative solver=B(0.70) critic=weaken final=B tier=high
+  [FINANCIALS__3856] type=causal solver=E(0.85) critic=weaken final=E tier=high
+  [BOOKS__5639] type=statement_combination solver=A(0.75) critic=weaken final=A tier=high
+  [PAPER__3202] type=definitional solver=E(0.60) critic=flip final=C tier=high
+  [Critic] WARN: PAPER__2642: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il solutore ha invertito la negazione nella domanda, interpretando erroneamente l\'affermazione 1 come falsa quando in realtà essa potrebbe essere vera se consideriamo che la sospensione della convertibilità implica sempre qualche tipo di r'
+  [PAPER__2642] type=statement_combination solver=D(0.90) critic=confirm final=D tier=high
+  [Miner] WARN: FINANCIALS__4026: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 8, "relevance_score": 0.9, "key_extraction": "Aumento netto delle disponibilità liquidità e mezzi equivalenti per il gruppo consolidato nel 2020"},\n    {"passage_id": 9, "relevance_score": 0.8, "key_extraction": "Valori delle disponibilità liquidità e me'
+  [FINANCIALS__4026] type=numerical solver=A(1.00) critic=weaken final=A tier=high
+  [PAPER__2780] type=causal solver=C(0.80) critic=weaken final=C tier=high
+  [Critic] WARN: PAPER__2663: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il solutore ha confuso VERE con FALSE (inversione). Le affermazioni 1, 2 e 3 sono state erroneamente definite false quando potrebbero essere vere o almeno parzialmente vere.",\n    "counterargument_type": "negation_inversion",\n    "countera'
+  [PAPER__2663] type=statement_combination solver=D(0.85) critic=confirm final=D tier=high
+  [BOOKS__30] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [Miner] WARN: FINANCIALS__4316: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "Flussi di cassa generati dalle variazioni del capitale circolante nel 2022: (52.031) e nel 2021: (45.677)"\n    }\n  ],\n  "option_scores": {\n    "A": {\n      "support_score": 0.0,\n      "verd'
+  [FINANCIALS__4316] type=numerical solver=E(0.95) critic=weaken final=E tier=high
+  [BOOKS__5779] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [BOOKS__1258] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [Miner] WARN: FINANCIALS__4377: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 1, "relevance_score": 0.9, "key_extraction": "Ricavi 2025: 42.039.615; Ricavi 2024: 47.121.170"},\n    {"passage_id": 2, "relevance_score": 0.8, "key_extraction": "Spese amministrative generali 2025: 3.501.749; Spese amministrative generali 2024: 1.906.47'
+  [FINANCIALS__4377] type=causal solver=E(0.90) critic=weaken final=E tier=high
+  [FINANCIALS__4454] type=comparative solver=B(0.95) critic=weaken final=B tier=high
+  [BOOKS__166] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [BOOKS__5416] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [PAPER__2877] type=causal solver=C(0.90) critic=weaken final=C tier=high
+  [Profiler] WARN FINANCIALS__4453: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [FINANCIALS__4453] type=factual solver=B(1.00) critic=weaken final=B tier=high
+  [Miner] WARN: FINANCIALS__3605: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 2, "relevance_score": 0.9, "key_extraction": "Vendite nette"},\n    {"passage_id": 3, "relevance_score": 0.8, "key_extraction": "Spese di vendita"},\n    {"passage_id": 4, "relevance_score": 0.7, "key_extraction": "Oneri finanziari"},\n    {"passage_id": 5,'
+  [FINANCIALS__3605] type=comparative solver=D(0.90) critic=weaken final=D tier=high
+  [20/300] 3025s elapsed, ~42355s ETA | acc=0.600
+  [BOOKS__5646] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [BOOKS__5218] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [BOOKS__2155] type=statement_combination solver=C(0.90) critic=confirm final=C tier=high
+  [BOOKS__6] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [PAPER__3521] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [Miner] WARN: FINANCIALS__4233: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 4, "relevance_score": 0.9, "key_extraction": "Totale passività a breve termine: TL: 179.542.775"},\n    {"passage_id": 5, "relevance_score": 0.9, "key_extraction": "Totale passività a lungo termine: TL: 58.482.215"},\n    {"passage_id": 6, "relevance_score'
+  [FINANCIALS__4233] type=numerical solver=C(0.95) critic=confirm final=C tier=high
+  [Critic] WARN: BOOKS__1243: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "La risposta proposta identifica erroneamente l\'affermazione 2 come falsa, quando in realtà essa dovrebbe essere considerata vera poiché l\'inflazione negativa indica una diminuzione dei prezzi, non un aumento.",\n    "counterargument_type": '
+  [BOOKS__1243] type=statement_combination solver=B(0.90) critic=confirm final=B tier=high
+  [PAPER__3195] type=causal solver=B(0.80) critic=weaken final=B tier=high
+  [PAPER__3115] type=causal solver=A(0.80) critic=weaken final=A tier=high
+  [FINANCIALS__4143] type=numerical solver=B(0.90) critic=weaken final=B tier=high
+  [BOOKS__5722] type=statement_combination solver=B(0.85) critic=weaken final=B tier=high
+  [PAPER__2557] type=statement_combination solver=C(0.90) critic=flip final=B tier=low
+  [PAPER__3273] type=statement_combination solver=E(0.90) critic=weaken final=E tier=high
+  [Critic] WARN: PAPER__2876: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "La risposta proposta non è incluso nell\'elenco delle opzioni fornite.",\n    "counterargument_type": "other",\n    "counterargument_strength": "strong",\n    "rebuttal": "La risposta proposta \'E\' non è presente nell\'elenco delle opzioni forni'
+  [PAPER__2876] type=causal solver=E(0.75) critic=confirm final=E tier=high
+  [BOOKS__1147] type=statement_combination solver=A(0.90) critic=flip final=D tier=low
+  [Critic] WARN: PAPER__2487: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "L\'affermazione 4 è stata erroneamente definita come falsa dal solutore, poiché una popolazione più numerosa da sola non garantisce la crescita economica; tuttavia, in alcuni casi, una popolazione più numerosa può contribuire alla crescita '
+  [PAPER__2487] type=statement_combination solver=D(0.90) critic=confirm final=D tier=high
+  [FINANCIALS__4688] type=numerical solver=C(1.00) critic=weaken final=C tier=high
+  [Miner] WARN: FINANCIALS__3919: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 3, "relevance_score": 0.9, "key_extraction": "Flusso di cassa netto generato dalle attività operative nel 2018: 250.286.132 TL"},\n    {"passage_id": 4, "relevance_score": 0.8, "key_extraction": "Rettifiche per riconciliare l\'utile (perdita) netto dell\'es'
+  [FINANCIALS__3919] type=numerical solver=B(0.95) critic=confirm final=B tier=high
+  [FINANCIALS__5119] type=numerical solver=A(1.00) critic=confirm final=A tier=high
+  [FINANCIALS__3675] type=inferential solver=B(0.85) critic=weaken final=B tier=high
+  [40/300] 5387s elapsed, ~35016s ETA | acc=0.650
+  [BOOKS__307] type=statement_combination solver=B(0.85) critic=weaken final=B tier=high
+  [FINANCIALS__4379] type=comparative solver=B(0.90) critic=weaken final=B tier=high
+  [BOOKS__2099] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [FINANCIALS__3722] type=inferential solver=A(0.80) critic=weaken final=A tier=high
+  [PAPER__3016] type=definitional solver=B(1.00) critic=weaken final=B tier=high
+  [BOOKS__5958] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [BOOKS__1391] type=statement_combination solver=A(0.90) critic=confirm final=A tier=high
+  [Profiler] WARN FINANCIALS__5087: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [FINANCIALS__5087] type=factual solver=B(0.90) critic=confirm final=B tier=high
+  [Critic] WARN: PAPER__3199: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "La risposta proposta non fornisce una definizione chiara del panico bancario, ma invece sostiene che nessuna delle opzioni fornisce una definizione specifica.",\n    "counterargument_type": "knowledge_override",\n    "counterargument_strengt'
+  [PAPER__3199] type=definitional solver=E(0.95) critic=confirm final=E tier=high
+  [PAPER__3025] type=inferential solver=D(0.80) critic=weaken final=D tier=high
+  [Critic] WARN: PAPER__3538: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "L\'affermazione 3 potrebbe essere considerata vera in alcuni contesti, poiché l\'assicurazione sui depositi può ridurre la corsa agli sportelli senza necessariamente limitare la capacità di trasformazione delle attività bancarie.",\n    "coun'
+  [PAPER__3538] type=statement_combination solver=A(0.87) critic=confirm final=A tier=high
+  [PAPER__3275] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [BOOKS__5414] type=statement_combination solver=B(0.95) critic=confirm final=B tier=high
+  [BOOKS__2362] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [FINANCIALS__3848] type=factual solver=A(1.00) critic=confirm final=A tier=high
+  [BOOKS__2295] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [PAPER__3412] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [Profiler] WARN PAPER__3240: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [PAPER__3240] type=factual solver=E(0.85) critic=flip final=B tier=high
+  [PAPER__3129] type=definitional solver=A(0.80) critic=weaken final=A tier=high
+  [BOOKS__1436] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [60/300] 7502s elapsed, ~30007s ETA | acc=0.667
+  [BOOKS__1622] type=statement_combination solver=C(0.90) critic=confirm final=C tier=high
+  [BOOKS__382] type=statement_combination solver=E(0.90) critic=flip final=B tier=near_tie
+  [BOOKS__1356] type=statement_combination solver=D(0.90) critic=flip final=B tier=low
+  [Critic] WARN: BOOKS__5275: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il deflatore del PIL include prezzi di beni e servizi prodotti nell\'economia, ma non necessariamente quelli acquistati dalle famiglie. Gli investimenti, i beni pubblici e le esportazioni possono essere inclusi nel calcolo del deflatore del'
+  [BOOKS__5275] type=statement_combination solver=A(0.80) critic=confirm final=A tier=high
+  [BOOKS__1877] type=statement_combination solver=C(0.85) critic=weaken final=C tier=high
+  [PAPER__2916] type=statement_combination solver=E(0.80) critic=weaken final=E tier=high
+  [BOOKS__2023] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [FINANCIALS__4380] type=factual solver=B(1.00) critic=confirm final=B tier=high
+  [Profiler] WARN FINANCIALS__4587: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [FINANCIALS__4587] type=factual solver=C(1.00) critic=confirm final=C tier=high
+  [FINANCIALS__4288] type=factual solver=B(0.95) critic=weaken final=B tier=high
+  [BOOKS__2227] type=statement_combination solver=A(0.90) critic=flip final=B tier=low
+  [BOOKS__6082] type=statement_combination solver=B(0.85) critic=weaken final=B tier=high
+  [BOOKS__5547] type=statement_combination solver=E(0.80) critic=weaken final=E tier=high
+  [BOOKS__5747] type=statement_combination solver=A(0.85) critic=confirm final=A tier=high
+  [FINANCIALS__4765] type=numerical solver=B(0.95) critic=weaken final=B tier=high
+  [PAPER__2792] type=definitional solver=C(0.70) critic=weaken final=C tier=high
+  [FINANCIALS__3991] type=comparative solver=B(0.70) critic=weaken final=B tier=high
+  [PAPER__2728] type=definitional solver=E(0.80) critic=weaken final=E tier=high
+  [BOOKS__400] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [FINANCIALS__4520] type=numerical solver=B(1.00) critic=weaken final=B tier=high
+  [80/300] 9361s elapsed, ~25742s ETA | acc=0.650
+  [BOOKS__2028] type=statement_combination solver=B(0.90) critic=flip final=A tier=low
+  [PAPER__2870] type=causal solver=C(0.90) critic=weaken final=C tier=high
+  [Profiler] WARN PAPER__3243: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [PAPER__3243] type=factual solver=C(0.80) critic=weaken final=C tier=high
+  [PAPER__2922] type=statement_combination solver=C(0.85) critic=confirm final=C tier=high
+  [FINANCIALS__4163] type=temporal solver=B(0.95) critic=weaken final=B tier=high
+  [FINANCIALS__5067] type=factual solver=A(1.00) critic=confirm final=A tier=high
+  [BOOKS__1841] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [BOOKS__5813] type=statement_combination solver=A(0.85) critic=flip final=B tier=near_tie
+  [Miner] WARN: FINANCIALS__4534: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "Variazioni delle differenze di conversione valutaria: 2021 -> 86.663, 2022 -> 18.863; Variazioni delle attività finanziarie valutate al fair value con impatto sulle riserve del conto econom'
+  [FINANCIALS__4534] type=numerical solver=D(0.90) critic=weaken final=D tier=high
+  [BOOKS__5215] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [FINANCIALS__5061] type=factual solver=A(1.00) critic=confirm final=A tier=high
+  [Critic] WARN: PAPER__3326: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il solutore ha confuso VERE con FALSE (inversione). L\'asserto 3 afferma che i metodi proposti si concentrano esclusivamente sulla stima degli effetti medi del trattamento senza considerare l\'eterogeneità tra le sottopopolazioni, mentre l\'a'
+  [PAPER__3326] type=statement_combination solver=E(0.60) critic=confirm final=E tier=high
+  [BOOKS__5529] type=statement_combination solver=A(0.85) critic=weaken final=A tier=high
+  [PAPER__2520] type=statement_combination solver=D(0.90) critic=confirm final=D tier=high
+  [Miner] WARN: FINANCIALS__4381: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "UTILE LORDO 31 marzo 2025: 6.797.686; UTILE LORDO 31 marzo 2024: 8.394.206"\n    }\n  ],\n  "option_scores": {\n    "A": {\n      "support_score": 1.0,\n      "verdict": "supported",\n      "evide'
+  [FINANCIALS__4381] type=numerical solver=A(0.95) critic=confirm final=A tier=high
+  [BOOKS__5695] type=statement_combination solver=C(0.80) critic=weaken final=C tier=high
+  [Miner] WARN: FINANCIALS__4542: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "Flussi di cassa netti generati dall\'attività operativa 2024 (USD): 53.541.896, 2023 (USD): 32.380.332"\n    }\n  ],\n  "option_scores": {\n    "A": {\n      "support_score": 1.0,\n      "verdict"'
+  [FINANCIALS__4542] type=numerical solver=A(0.95) critic=confirm final=A tier=high
+  [FINANCIALS__4839] type=numerical solver=D(1.00) critic=weaken final=D tier=high
+  [BOOKS__5391] type=statement_combination solver=C(0.90) critic=confirm final=C tier=high
+  [BOOKS__1238] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [100/300] 11533s elapsed, ~23066s ETA | acc=0.670
+  [Critic] WARN: PAPER__3283: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "La prima affermazione potrebbe essere interpretata in modo errato se si considera che la covariazione negativa tra l\'illiquidità e i rendimenti di mercato potrebbe portare a richiedere rendimenti più alti invece che inferiori, in quanto l\''
+  [PAPER__3283] type=statement_combination solver=A(0.90) critic=confirm final=A tier=high
+  [FINANCIALS__3796] type=inferential solver=C(0.70) critic=weaken final=C tier=high
+  [Miner] WARN: FINANCIALS__4390: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "Totale debiti a breve termine al 31 marzo 2025: 40.689.398; Totale debiti a breve termine al 31 dicembre 2024: 29.689.805"\n    }\n  ],\n  "option_scores": {\n    "A": {\n      "support_score": '
+  [FINANCIALS__4390] type=numerical solver=A(0.95) critic=confirm final=A tier=high
+  [Profiler] WARN FINANCIALS__5089: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [FINANCIALS__5089] type=factual solver=C(1.00) critic=weaken final=C tier=high
+  [PAPER__3545] type=statement_combination solver=B(0.90) critic=flip final=D tier=low
+  [Miner] WARN: FINANCIALS__4236: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 3, "relevance_score": 0.9, "key_extraction": "Totale passività a breve termine: TL: 179.542.775, EUR: 26.996.477"},\n    {"passage_id": 4, "relevance_score": 0.9, "key_extraction": "Totale passività a lungo termine: TL: 58.482.215, EUR: 8.564.450"},\n    {'
+  [FINANCIALS__4236] type=numerical solver=C(0.95) critic=weaken final=C tier=high
+  [BOOKS__1624] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [PAPER__3285] type=statement_combination solver=B(0.85) critic=weaken final=B tier=high
+  [Critic] WARN: BOOKS__1704: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il solutore ha invertito la negazione nella sua valutazione delle affermazioni, considerando erroneamente le affermazioni 4 e 5 come false quando in realtà dovrebbero essere considerate come vere nel contesto dell\'opzione E.",\n    "counter'
+  [BOOKS__1704] type=statement_combination solver=E(0.90) critic=confirm final=E tier=high
+  [PAPER__2950] type=inferential solver=D(0.70) critic=weaken final=D tier=high
+  [PAPER__2923] type=definitional solver=E(0.95) critic=flip final=D tier=near_tie
+  [Miner] WARN: FINANCIALS__3623: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 2, "relevance_score": 0.9, "key_extraction": "Altri utili (perdite) complessivi netti riclassificabili a conto economico: Capogruppo: Gennaio-settembre 2020: (1.169.821)"},\n    {"passage_id": 3, "relevance_score": 0.8, "key_extraction": "Considerando sia'
+  [Critic] WARN: FINANCIALS__3623: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il calcolo del reddito complessivo per la società madre include un errore aritmetico.",\n    "counterargument_type": "arithmetic_error",\n    "counterargument_strength": "strong",\n    "rebuttal": "Il calcolo proposto dal solutore ha incluso '
+  [FINANCIALS__3623] type=numerical solver=E(0.95) critic=confirm final=E tier=high
+  [PAPER__3159] type=negation solver=E(0.50) critic=flip final=E tier=near_tie
+  [Critic] WARN: BOOKS__6250: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il solutore ha confuso VERE con FALSE (inversione). Le nuove tecnologie possono effettivamente creare esternalità positive che non vengono completamente internalizzate dagli inventori, portando a benefici sociali condivisi.",\n    "countera'
+  [BOOKS__6250] type=statement_combination solver=A(0.90) critic=confirm final=A tier=high
+  [Miner] WARN: FINANCIALS__4261: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 3, "relevance_score": 0.9, "key_extraction": "Differenze di conversione valutaria: 10.191.624 (al 31 dicembre 2019) e 3.089.670 (al 31 dicembre 2019)"},\n    {"passage_id": 4, "relevance_score": 0.8, "key_extraction": "Utili/(perdite) attuariali sui piani'
+  [FINANCIALS__4261] type=numerical solver=A(0.70) critic=confirm final=A tier=high
+  [FINANCIALS__4926] type=numerical solver=A(1.00) critic=confirm final=A tier=high
+  [FINANCIALS__4597] type=comparative solver=C(0.90) critic=weaken final=C tier=high
+  [PAPER__3213] type=definitional solver=E(0.95) critic=flip final=C tier=near_tie
+  [PAPER__2602] type=statement_combination solver=C(0.90) critic=confirm final=C tier=high
+  [FINANCIALS__3757] type=comparative solver=A(0.90) critic=weaken final=A tier=high
+  [120/300] 14476s elapsed, ~21713s ETA | acc=0.675
+  [Miner] WARN: FINANCIALS__3802: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 1, "relevance_score": 0.9, "key_extraction": "Ricavi, costo delle vendite, utile lordo, utili netti"},\n    {"passage_id": 3, "relevance_score": 0.8, "key_extraction": "Tabella con dati finanziari per il periodo intermedio 1° gennaio - 30 giugno 2025 e 20'
+  [FINANCIALS__3802] type=comparative solver=E(0.90) critic=flip final=D tier=near_tie
+  [BOOKS__5341] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [Critic] WARN: PAPER__2560: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il ragionamento del sultore sembra aver trascurato l\'aspetto che i gestori degli investimenti moderni potrebbero essere incentivati in modo simile ai dirigenti bancari degli anni \'60, considerando che entrambi cercano di massimizzare il pr'
+  [PAPER__2560] type=statement_combination solver=B(0.90) critic=confirm final=B tier=high
+  [PAPER__2774] type=definitional solver=C(0.80) critic=weaken final=C tier=high
+  [PAPER__2497] type=statement_combination solver=A(0.85) critic=weaken final=A tier=high
+  [FINANCIALS__4412] type=factual solver=C(0.95) critic=confirm final=C tier=high
+  [PAPER__3056] type=causal solver=E(0.90) critic=flip final=C tier=near_tie
+  [Critic] WARN: BOOKS__2134: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il solutore ha invertito la negazione nelle affermazioni 1 e 5, dicendo che i benefici marginali della riduzione dell\'inquinamento tendono a diminuire e che i costi marginali tendono a crescere quando invece dovrebbero dire che i benefici '
+  [BOOKS__2134] type=statement_combination solver=A(0.90) critic=confirm final=A tier=high
+  [FINANCIALS__3577] type=comparative solver=C(0.90) critic=weaken final=C tier=high
+  [Profiler] WARN FINANCIALS__4278: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [FINANCIALS__4278] type=factual solver=B(1.00) critic=weaken final=B tier=high
+  [PAPER__3454] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [BOOKS__5690] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [Miner] WARN: FINANCIALS__3595: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 2, "relevance_score": 0.9, "key_extraction": "Capitale emesso, Adeguamenti al capitale per inflazione, Azioni riacquistate, Sovrapprezzo azioni, Riserva di utili o perdite su operazioni di copertura, Riserve vincolate stanziate dagli utili, Proventi da p'
+  [FINANCIALS__3595] type=comparative solver=E(0.95) critic=weaken final=E tier=high
+  [Miner] WARN: FINANCIALS__3963: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 2,\n      "relevance_score": 0.9,\n      "key_extraction": "Tabella che mostra i dettagli del patrimonio netto per l\'esercizio chiuso al 31 dicembre 2018 e 2019."\n    },\n    {\n      "passage_id": 3,\n      "relevance_score": 0.8,\n      "key_extractio'
+  [FINANCIALS__3963] type=numerical solver=C(0.95) critic=weaken final=C tier=high
+  [BOOKS__1766] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [PAPER__2403] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [Critic] WARN: PAPER__2684: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "La risposta proposta non utilizza una definizione chiara e precisa del rischio sistemico basato sul deficit di capitale previsto in caso di crisi.",\n    "counterargument_type": "definition_missed",\n    "counterargument_strength": "strong",'
+  [PAPER__2684] type=definitional solver=E(0.95) critic=confirm final=E tier=high
+  [BOOKS__1592] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [Miner] WARN: FINANCIALS__4771: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 1, "relevance_score": 0.9, "key_extraction": "Capitale sociale versato, Sovrapprezzi di emissione, Riserve di utili vincolati, Utili portati a nuovo"},\n    {"passage_id": 2, "relevance_score": 0.8, "key_extraction": "Trasferimenti tra le varie componenti'
+  [FINANCIALS__4771] type=numerical solver=E(0.90) critic=flip final=C tier=near_tie
+  [FINANCIALS__4027] type=numerical solver=A(1.00) critic=confirm final=A tier=high
+  [140/300] 17086s elapsed, ~19527s ETA | acc=0.664
+  [FINANCIALS__5161] type=numerical solver=B(1.00) critic=weaken final=B tier=high
+  [BOOKS__5502] type=statement_combination solver=A(0.85) critic=weaken final=A tier=high
+  [BOOKS__5312] type=statement_combination solver=E(0.80) critic=weaken final=E tier=high
+  [PAPER__2998] type=definitional solver=E(0.95) critic=weaken final=E tier=high
+  [Miner] WARN: FINANCIALS__4050: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 0.9,\n      "key_extraction": "Patrimonio netto totale nel 2017 e 2018"\n    }\n  ],\n  "option_scores": {\n    "A": {\n      "support_score": 0.2,\n      "verdict": "contradicted",\n      "evidence_snippet": "Patrimonio netto '
+  [FINANCIALS__4050] type=numerical solver=E(0.90) critic=weaken final=E tier=high
+  [PAPER__2556] type=statement_combination solver=C(0.58) critic=weaken final=C tier=high
+  [PAPER__2860] type=causal solver=E(0.45) critic=flip final=E tier=low
+  [Miner] WARN: FINANCIALS__3655: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 0.9,\n      "key_extraction": "La tabella mostra le variazioni nel patrimonio netto tra il 1° gennaio 2023 e il 31 dicembre 2023."\n    }\n  ],\n  "option_scores": {\n    "A": {"support_score": 0.8, "verdict": "supported", "'
+  [FINANCIALS__3655] type=comparative solver=E(0.90) critic=flip final=D tier=near_tie
+  [BOOKS__2278] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [BOOKS__354] type=statement_combination solver=A(0.90) critic=confirm final=A tier=high
+  [Miner] WARN: FINANCIALS__4058: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "Disponibilità liquide e mezzi equivalenti: 106.914 TL (2019), 635.091 TL (2018); Crediti commerciali - verso terzi: 78.631 TL (2019), 467.086 TL (2018); Magazzino: 113.178 TL (2019), 672.30'
+  [FINANCIALS__4058] type=numerical solver=E(0.67) critic=flip final=A tier=low
+  [BOOKS__2350] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [Miner] WARN: FINANCIALS__4314: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "Proventi finanziari 2024 (USD): 12.253.966, 2023 (USD): 11.811.476; Oneri finanziari 2024 (USD): 9.526.626, 2023 (USD): 9.277.080"\n    }\n  ],\n  "option_scores": {\n    "A": {\n      "support_'
+  [FINANCIALS__4314] type=numerical solver=E(0.95) critic=flip final=E tier=near_tie
+  [PAPER__3117] type=causal solver=E(0.75) critic=flip final=A tier=low
+  [PAPER__3458] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [PAPER__3204] type=definitional solver=A(0.80) critic=weaken final=A tier=high
+  [BOOKS__1740] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [PAPER__2551] type=statement_combination solver=C(0.85) critic=weaken final=C tier=high
+  [PAPER__3166] type=negation solver=E(0.65) critic=flip final=C tier=high
+  [BOOKS__2269] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [160/300] 19416s elapsed, ~16989s ETA | acc=0.656
+  [BOOKS__2138] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [BOOKS__5525] type=statement_combination solver=E(0.80) critic=weaken final=E tier=high
+  [Critic] WARN: PAPER__3324: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "L\'affermazione 1 può essere considerata falsa poiché i metodi di partizionamento ricorsivo non sono necessariamente validi per tutti i tipi di studi sperimentali e osservazionali, e potrebbero non garantire sempre la stima di effetti causa'
+  [PAPER__3324] type=statement_combination solver=D(0.90) critic=confirm final=D tier=high
+  [PAPER__2787] type=causal solver=E(0.75) critic=weaken final=E tier=high
+  [FINANCIALS__3620] type=comparative solver=D(0.80) critic=weaken final=D tier=high
+  [BOOKS__6253] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [Critic] WARN: PAPER__3442: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "La domanda presenta una negazione logica nella sua struttura, poiché richiede di identificare le affermazioni false, ma la risposta proposta indica che le affermazioni 1, 3 e 4 sono false, mentre l\'affermazione 2 è vera. Tuttavia, la doman'
+  [PAPER__3442] type=statement_combination solver=B(0.90) critic=confirm final=B tier=high
+  [BOOKS__5835] type=statement_combination solver=B(0.85) critic=weaken final=B tier=high
+  [BOOKS__1654] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [PAPER__3190] type=definitional solver=E(0.95) critic=weaken final=E tier=high
+  [Critic] WARN: PAPER__2943: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "La risposta proposta non risponde correttamente alla domanda negata.",\n    "counterargument_type": "negation_inversion",\n    "counterargument_strength": "strong",\n    "rebuttal": "La domanda chiede quale fattore NON è menzionato come indic'
+  [PAPER__2943] type=negation solver=E(0.60) critic=confirm final=E tier=high
+  [Profiler] WARN PAPER__3163: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [PAPER__3163] type=factual solver=C(1.00) critic=weaken final=C tier=high
+  [PAPER__2905] type=definitional solver=E(0.95) critic=weaken final=E tier=high
+  [Profiler] WARN FINANCIALS__3853: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [FINANCIALS__3853] type=factual solver=B(0.95) critic=weaken final=B tier=high
+  [Miner] WARN: FINANCIALS__5159: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "Interessi di minoranza e Patrimonio netto totale al 31 marzo 2025"\n    }\n  ],\n  "option_scores": {\n    "A": {\n      "support_score": 0.0,\n      "verdict": "contradicted",\n      "evidence_sn'
+  [FINANCIALS__5159] type=numerical solver=A(0.63) critic=weaken final=A tier=high
+  [Miner] WARN: FINANCIALS__4707: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "Materie prime e materiali di consumo: 2021 - (21.641.346), 2022 - (22.875.549); Costo del personale e relativi benefici: 2021 - (863.140), 2022 - (906.507); Ammortamenti e svalutazioni: 202'
+  [FINANCIALS__4707] type=numerical solver=D(0.95) critic=weaken final=D tier=high
+  [Miner] WARN: FINANCIALS__4689: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 1, "relevance_score": 0.9, "key_extraction": "Valori delle attività in funzionamento nel 2021 e 2022"},\n    {"passage_id": 2, "relevance_score": 0.8, "key_extraction": "Componenti che compongono il totale delle attività in funzionamento"}\n  ],\n  "option_'
+  [FINANCIALS__4689] type=numerical solver=A(0.90) critic=weaken final=A tier=high
+  [FINANCIALS__4607] type=numerical solver=D(0.95) critic=weaken final=D tier=high
+  [FINANCIALS__4853] type=factual solver=A(1.00) critic=weaken final=A tier=high
+  [Miner] WARN: FINANCIALS__4312: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "Utile lordo 2024: 114.308.635 KRW, Utile lordo 2023: 78.546.914 KRW"\n    }\n  ],\n  "option_scores": {\n    "A": {\n      "support_score": 0.0,\n      "verdict": "contradicted",\n      "evidence_'
+  [Critic] WARN: FINANCIALS__4312: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il sottrarre l\'utile dell\'esercizio tra i due anni non corrisponde all\'aumento dell\'utile al lordo delle imposte sul reddito.",\n    "counterargument_type": "arithmetic_error",\n    "counterargument_strength": "strong",\n    "rebuttal": "L\'ut'
+  [FINANCIALS__4312] type=numerical solver=E(1.00) critic=confirm final=E tier=high
+  [180/300] 22563s elapsed, ~15042s ETA | acc=0.644
+  [Miner] WARN: FINANCIALS__3638: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 1, "relevance_score": 0.9, "key_extraction": "Ricavi 2019: 481.038.509 TL, 2018: 285.125.945 TL"},\n    {"passage_id": 2, "relevance_score": 0.8, "key_extraction": "Costo delle vendite 2019: 362.460.964 TL, 2018: 204.697.960 TL"},\n    {"passage_id": 3, "r'
+  [Critic] WARN: FINANCIALS__3638: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il ragionamento del sottosistema si basa su una mancanza di dati specifici che non permettono di collegare direttamente le variazioni nei ricavi e nelle spese con il miglioramento dell\'EPS.",\n    "counterargument_type": "knowledge_override'
+  [FINANCIALS__3638] type=inferential solver=E(0.90) critic=confirm final=E tier=high
+  [Critic] WARN: PAPER__3003: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "L\'affermazione E è ambigua e non specifica una combinazione precisa di affermazioni valide, ma piuttosto indica che nessuna delle altre affermazioni è corretta. Questo rende difficile determinare se l\'opzione E è realmente valida o meno.",'
+  [PAPER__3003] type=statement_combination solver=E(0.80) critic=confirm final=E tier=high
+  [PAPER__2705] type=causal solver=B(0.80) critic=weaken final=B tier=high
+  [PAPER__2601] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [BOOKS__2070] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [Critic] WARN: PAPER__2466: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il solutore ha confuso VERE con FALSE (inversione). L\'affermazione 1 viene definita come falsa, ma potrebbe essere considerata vera se si interpreta che il fattore redditività non diventa superfluo, ma rimane importante anche quando il fat'
+  [PAPER__2466] type=statement_combination solver=E(0.90) critic=confirm final=E tier=high
+  [BOOKS__1976] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [BOOKS__541] type=statement_combination solver=A(0.80) critic=weaken final=A tier=high
+  [BOOKS__1652] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [PAPER__2499] type=statement_combination solver=B(0.80) critic=weaken final=B tier=high
+  [BOOKS__6015] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [BOOKS__5904] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [BOOKS__494] type=statement_combination solver=A(0.95) critic=weaken final=A tier=high
+  [Profiler] WARN FINANCIALS__4334: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [FINANCIALS__4334] type=factual solver=A(0.95) critic=weaken final=A tier=high
+  [BOOKS__1227] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [BOOKS__1349] type=statement_combination solver=B(0.90) critic=confirm final=B tier=high
+  [PAPER__2644] type=statement_combination solver=A(0.85) critic=weaken final=A tier=high
+  [BOOKS__6148] type=statement_combination solver=E(0.90) critic=confirm final=E tier=high
+  [BOOKS__5252] type=statement_combination solver=A(0.90) critic=confirm final=A tier=high
+  [PAPER__2775] type=inferential solver=C(0.70) critic=weaken final=C tier=high
+  [200/300] 24504s elapsed, ~12252s ETA | acc=0.630
+  [Miner] WARN: FINANCIALS__4630: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 1, "relevance_score": 0.9, "key_extraction": "Costi logistici, Costi di marketing, Spese generali e amministrative, Costi di vendita"},\n    {"passage_id": 2, "relevance_score": 0.8, "key_extraction": "Identificare quale spesa è aumentata maggiormente in '
+  [FINANCIALS__4630] type=numerical solver=B(0.95) critic=confirm final=B tier=high
+  [FINANCIALS__3733] type=comparative solver=E(0.90) critic=weaken final=E tier=high
+  [Miner] WARN: FINANCIALS__3710: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 0.9,\n      "key_extraction": "UTILE (PERDITA): 570.947 (31 marzo 2025), 4.135.915 (31 marzo 2024)"\n    }\n  ],\n  "option_scores": {\n    "A": {"support_score": 0.2, "verdict": "neutral", "evidence_snippet": "Altre compone'
+  [Critic] WARN: FINANCIALS__3710: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "La diminuzione dell\'utile complessivo è stata parzialmente compensata dall\'aumento delle altre componenti di conto economico complessivo, ma non è chiaro se queste ultime abbiano un impatto significativo sufficiente a bilanciare la perdita'
+  [FINANCIALS__3710] type=comparative solver=E(0.90) critic=confirm final=E tier=high
+  [BOOKS__1992] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [PAPER__2869] type=causal solver=B(0.75) critic=weaken final=B tier=high
+  [Critic] WARN: BOOKS__305: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il solutore ha erroneamente scelto l\'opzione E senza fornire una combinazione specifica delle caratteristiche dei mercati del lavoro tra Stati Uniti e Europa.",\n    "counterargument_type": "knowledge_override",\n    "counterargument_strengt'
+  [BOOKS__305] type=statement_combination solver=E(0.80) critic=confirm final=E tier=high
+  [BOOKS__5546] type=statement_combination solver=E(0.80) critic=weaken final=E tier=high
+  [BOOKS__1427] type=statement_combination solver=A(0.90) critic=flip final=B tier=near_tie
+  [FINANCIALS__4037] type=factual solver=B(1.00) critic=confirm final=B tier=high
+  [Miner] WARN: FINANCIALS__4654: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "Debiti a breve termine: 1.469.817.407; Ricavi differiti: 87.453.816"\n    }\n  ],\n  "option_scores": {\n    "A": {\n      "support_score": 0.9,\n      "verdict": "supported",\n      "evidence_sni'
+  [FINANCIALS__4654] type=numerical solver=A(0.95) critic=weaken final=A tier=high
+  [BOOKS__355] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [PAPER__3185] type=causal solver=D(0.70) critic=weaken final=D tier=high
+  [PAPER__2480] type=statement_combination solver=D(0.90) critic=confirm final=D tier=high
+  [PAPER__3318] type=statement_combination solver=D(0.90) critic=flip final=B tier=low
+  [PAPER__3062] type=causal solver=C(0.80) critic=weaken final=C tier=high
+  [PAPER__3506] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [PAPER__2441] type=statement_combination solver=E(0.90) critic=weaken final=E tier=high
+  [Profiler] WARN FINANCIALS__4056: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [FINANCIALS__4056] type=factual solver=E(0.95) critic=weaken final=E tier=high
+  [BOOKS__5497] type=statement_combination solver=E(0.90) critic=weaken final=E tier=high
+  [BOOKS__139] type=statement_combination solver=E(0.80) critic=flip final=B tier=near_tie
+  [220/300] 26832s elapsed, ~9757s ETA | acc=0.623
+  [Profiler] WARN FINANCIALS__3866: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [Miner] WARN: FINANCIALS__3866: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 2, "relevance_score": 0.9, "key_extraction": "- Aumento di rivalutazione derivante da attività materiali, effetto fiscale | | (173.937.483) | -"},\n    {"passage_id": 3, "relevance_score": 0.8, "key_extraction": "Ricavi | 21 | 5.582.800.586 | 3.972.625.97'
+  [FINANCIALS__3866] type=factual solver=B(0.90) critic=weaken final=B tier=high
+  [FINANCIALS__3658] type=numerical solver=E(0.95) critic=weaken final=E tier=high
+  [Critic] WARN: FINANCIALS__3905: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il confronto tra le attività di finanziamento mostra che nel 2018 ci fu un flusso netto positivo di 346.599 TL, mentre nel 2019 ci fu un flusso netto negativo di 689.705 TL. Questo dimostra che l\'attività di finanziamento ha avuto un impat'
+  [FINANCIALS__3905] type=comparative solver=A(0.95) critic=confirm final=A tier=high
+  [PAPER__2809] type=causal solver=E(0.20) critic=weaken final=E tier=high
+  [FINANCIALS__3972] type=numerical solver=B(1.00) critic=weaken final=B tier=high
+  [Miner] WARN: FINANCIALS__4984: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "Utile netto del periodo per il 1° gennaio - 30 giugno 2024: 2.633.760; Utile netto del periodo per il 1° gennaio - 30 giugno 2025: 1.321.147"\n    }\n  ],\n  "option_scores": {\n    "A": {\n    '
+  [FINANCIALS__4984] type=numerical solver=D(0.93) critic=weaken final=D tier=high
+  [BOOKS__540] type=statement_combination solver=E(0.90) critic=weaken final=E tier=high
+  [Critic] WARN: BOOKS__337: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "L\'affermazione A potrebbe essere considerata troppo generica e non specifica riguardo al concetto di prodotto marginale decrescente, che implica una diminuzione nel valore aggiunto da ciascun fattore produttivo aggiuntivo, piuttosto che se'
+  [BOOKS__337] type=statement_combination solver=A(0.90) critic=confirm final=A tier=high
+  [PAPER__2799] type=definitional solver=C(0.90) critic=flip final=A tier=near_tie
+  [PAPER__2816] type=factual solver=E(0.20) critic=flip final=E tier=low
+  [PAPER__3537] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [Miner] WARN: FINANCIALS__4724: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 2,\n      "relevance_score": 1.0,\n      "key_extraction": "Quale parte dei debiti a medio/lungo termine ha registrato la maggiore diminuzione in termini assoluti dal 2021 al 2022?"\n    }\n  ],\n  "option_scores": {\n    "A": {\n      "support_score": 0'
+  [FINANCIALS__4724] type=numerical solver=E(0.95) critic=flip final=B tier=near_tie
+  [Critic] WARN: BOOKS__77: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "L\'affermazione E è troppo generica e non specifica come la strategia del Monumento a Washington possa essere fuorviante in termini di utilità marginale decrescente.",\n    "counterargument_type": "qualifier_missed",\n    "counterargument_str'
+  [BOOKS__77] type=statement_combination solver=E(0.80) critic=confirm final=E tier=high
+  [PAPER__2434] type=statement_combination solver=A(0.80) critic=weaken final=A tier=high
+  [BOOKS__1520] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [FINANCIALS__3657] type=numerical solver=A(0.90) critic=weaken final=A tier=high
+  [FINANCIALS__4042] type=factual solver=A(1.00) critic=confirm final=A tier=high
+  [PAPER__2584] type=statement_combination solver=B(0.85) critic=weaken final=B tier=high
+  [Critic] WARN: FINANCIALS__4968: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il valore indicato nel testo come rilevato nel patrimonio netto nel corso dell\'esercizio 2023 è (1.442), ma la domanda chiede il valore riconosciuto nel patrimonio netto a seguito della rimisurazione delle coperture dei flussi finanziari, '
+  [FINANCIALS__4968] type=numerical solver=C(1.00) critic=confirm final=C tier=high
+  [Critic] WARN: PAPER__2951: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il solutore ha utilizzato conoscenza generale invece di evidenze specifiche dal testo fornito.",\n    "counterargument_type": "knowledge_override",\n    "counterargument_strength": "strong",\n    "rebuttal": "Il solutore ha basato la sua risp'
+  [PAPER__2951] type=factual solver=E(0.95) critic=confirm final=E tier=high
+  [240/300] 29874s elapsed, ~7469s ETA | acc=0.617
+  [PAPER__2770] type=definitional solver=E(0.95) critic=weaken final=E tier=high
+  [Profiler] WARN FINANCIALS__4886: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [FINANCIALS__4886] type=factual solver=D(0.95) critic=weaken final=D tier=high
+  [Critic] WARN: BOOKS__399: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il ragionamento del sultore non considera che l\'obbligo di esaminare gli smeraldi da parte di un ente indipendente potrebbe comportare costi aggiuntivi per i venditori, i quali potrebbero decidere di ridurre la quantità di smeraldi di alta'
+  [BOOKS__399] type=statement_combination solver=E(0.80) critic=confirm final=E tier=high
+  [Critic] WARN: BOOKS__2186: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "La risposta proposta sostiene che solo l\'affermazione 2 sia vera, ma trascura che l\'affermazione 1 riguarda la spesa clientelare, che può beneficiare specifici distretti o gruppi, mentre l\'affermazione 3 riguarda l\'ignoranza razionale, che'
+  [BOOKS__2186] type=statement_combination solver=C(0.90) critic=confirm final=C tier=high
+  [Miner] WARN: FINANCIALS__4659: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "Passività contrattuali: 394.066.125 (giugno 2025), 333.941.687 (dicembre 2024)"\n    }\n  ],\n  "option_scores": {\n    "A": {\n      "support_score": 0.9,\n      "verdict": "supported",\n      "e'
+  [Critic] WARN: FINANCIALS__4659: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il calcolo della differenza tra le passività contrattuali nel periodo corrente e nel periodo precedente è corretto, ma l\'opzione E non è presente nell\'elenco delle opzioni fornite.",\n    "counterargument_type": "knowledge_override",\n    "c'
+  [FINANCIALS__4659] type=numerical solver=E(0.95) critic=confirm final=E tier=high
+  [BOOKS__5726] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [BOOKS__1913] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [Critic] WARN: BOOKS__1455: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "L\'affermazione 1 è stata interpretata erroneamente dal solutore. Il modello AD/AS può essere utilizzato per analizzare sia la crescita economica a lungo termine che i cicli economici a breve termine, ma l\'affermazione afferma che può esser'
+  [BOOKS__1455] type=statement_combination solver=B(0.90) critic=confirm final=B tier=high
+  [Critic] WARN: BOOKS__5658: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "L\'opzione B suggerisce che un aumento del tasso di disoccupazione sia dovuto al fatto che più persone entrano nel mercato del lavoro, ma non considera che l\'aumento della disoccupazione potrebbe essere causato da un maggior numero di licen'
+  [BOOKS__5658] type=statement_combination solver=B(0.85) critic=confirm final=B tier=high
+  [FINANCIALS__4631] type=factual solver=B(0.80) critic=weaken final=B tier=high
+  [BOOKS__5886] type=statement_combination solver=E(0.90) critic=confirm final=E tier=high
+  [Profiler] WARN FINANCIALS__4903: Schema validation failed: difficulty: Input should be 'low', 'medium' or 'high'
+  [FINANCIALS__4903] type=factual solver=D(1.00) critic=confirm final=D tier=high
+  [BOOKS__1744] type=statement_combination solver=D(0.80) critic=weaken final=D tier=high
+  [BOOKS__6213] type=statement_combination solver=A(0.85) critic=flip final=B tier=high
+  [PAPER__3123] type=causal solver=D(0.85) critic=weaken final=D tier=high
+  [Miner] WARN: FINANCIALS__4366: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 1, "relevance_score": 0.9, "key_extraction": "Tabella contenente i valori delle immobilizzazioni al 31 marzo 2025 e al 31 dicembre 2024"},\n    {"passage_id": 2, "relevance_score": 0.8, "key_extraction": "Domanda riguardante la variazione numerica minore '
+  [FINANCIALS__4366] type=numerical solver=E(0.90) critic=weaken final=E tier=high
+  [Critic] WARN: PAPER__3178: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "La risposta proposta E (\'Nessuna delle precedenti\') è stata scelta senza una chiara definizione del teorema dell\'insieme efficiente.",\n    "counterargument_type": "wrong_definition",\n    "counterargument_strength": "moderate",\n    "rebutta'
+  [PAPER__3178] type=definitional solver=E(0.95) critic=confirm final=E tier=high
+  [BOOKS__1404] type=statement_combination solver=B(0.90) critic=weaken final=B tier=high
+  [PAPER__2699] type=factual solver=D(0.70) critic=weaken final=D tier=high
+  [PAPER__2617] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [260/300] 32526s elapsed, ~5004s ETA | acc=0.612
+  [Miner] WARN: FINANCIALS__4776: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 1, "relevance_score": 0.9, "key_extraction": "Tabella con i valori del patrimonio netto e delle sue componenti per il periodo 1° gennaio 2025 al 30 giugno 2025"},\n    {"passage_id": 2, "relevance_score": 0.8, "key_extraction": "Domanda sulle variazioni p'
+  [FINANCIALS__4776] type=numerical solver=E(0.90) critic=flip final=D tier=near_tie
+  [FINANCIALS__3665] type=comparative solver=C(0.90) critic=weaken final=C tier=high
+  [PAPER__3494] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [PAPER__2470] type=statement_combination solver=A(0.85) critic=weaken final=A tier=high
+  [BOOKS__2248] type=statement_combination solver=D(0.95) critic=weaken final=D tier=high
+  [Miner] WARN: FINANCIALS__4018: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 1, "relevance_score": 1.0, "key_extraction": "Utile (perdita) da società collegate e joint venture: 7.192.215 (9 mesi 2020)"},\n    {"passage_id": 2, "relevance_score": 0.8, "key_extraction": "Vendite nette: Capogruppo (gennaio-settembre 2020) 22.716.953"'
+  [FINANCIALS__4018] type=factual solver=A(0.95) critic=confirm final=A tier=high
+  [Critic] WARN: BOOKS__6052: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il ragionamento del solutore non tiene conto delle implicazioni pratiche dell\'equilibrio di Nash nel contesto di due aziende concorrenti. L\'equilibrio di Nash implica che entrambe le aziende agiscano in modo ottimale considerando la strate'
+  [BOOKS__6052] type=statement_combination solver=E(0.85) critic=confirm final=E tier=high
+  [BOOKS__1135] type=statement_combination solver=B(0.95) critic=confirm final=B tier=high
+  [PAPER__3303] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [Miner] WARN: FINANCIALS__3734: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 1, "relevance_score": 0.9, "key_extraction": "Ricavi: 1.497.684.785 (2025), 1.281.940.463 (2024); Costo del venduto: (1.317.385.489) (2025), (1.108.019.228) (2024)"},\n    {"passage_id": 2, "relevance_score": 0.8, "key_extraction": "Utile lordo: 180.299.2'
+  [FINANCIALS__3734] type=comparative solver=E(0.95) critic=weaken final=E tier=high
+  [BOOKS__6139] type=statement_combination solver=A(0.95) critic=weaken final=A tier=high
+  [Critic] WARN: FINANCIALS__4467: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il valore totale delle differenze di conversione valutaria per operazioni estere, al netto delle imposte, è maggiore rispetto all\'utile sulla valutazione delle attività finanziarie al fair value attraverso altre componenti di conto economi'
+  [FINANCIALS__4467] type=factual solver=B(0.90) critic=confirm final=B tier=high
+  [PAPER__2850] type=statement_combination solver=E(0.90) critic=flip final=E tier=near_tie
+  [BOOKS__1849] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [Miner] WARN: FINANCIALS__3800: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 1, "relevance_score": 1.0, "key_extraction": "Ricavi: 174.844.068 (2025), 163.434.121 (2024); Utile lordo: 42.036.181 (2025), 35.384.518 (2024)"}\n  ],\n  "option_scores": {\n    "A": {"support_score": 0.8, "verdict": "supported", "evidence_snippet": "Ricav'
+  [FINANCIALS__3800] type=comparative solver=E(0.95) critic=weaken final=E tier=high
+  [PAPER__3272] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [Miner] WARN: FINANCIALS__4354: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 1,\n      "relevance_score": 1.0,\n      "key_extraction": "Il patrimonio netto totale è 642.947 migliaia di euro e il passivo totale è 1.788.657 migliaia di euro."\n    }\n  ],\n  "option_scores": {\n    "A": {\n      "support_score": 0.1,\n      "verdic'
+  [FINANCIALS__4354] type=numerical solver=E(0.95) critic=weaken final=E tier=high
+  [BOOKS__493] type=statement_combination solver=B(0.85) critic=weaken final=B tier=high
+  [Miner] WARN: FINANCIALS__3917: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 1, "relevance_score": 0.9, "key_extraction": "Utile netto/(perdita) dell\'esercizio derivante dalle attività operative (A) - 2018: 814.259.158"},\n    {"passage_id": 4, "relevance_score": 0.8, "key_extraction": "Flusso di cassa netto generato dalle attivit'
+  [Critic] WARN: FINANCIALS__3917: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il valore fornito nella risposta proposta (814.259.158 TL) rappresenta l\'utile netto derivante dalle attività operative, ma la domanda chiede l\'utile/la perdita netta delle operazioni per l\'anno 2018, che dovrebbe includere anche le rettif'
+  [FINANCIALS__3917] type=numerical solver=A(0.90) critic=confirm final=A tier=high
+  [BOOKS__5651] type=statement_combination solver=A(0.85) critic=weaken final=A tier=high
+  [280/300] 35365s elapsed, ~2526s ETA | acc=0.607
+  [BOOKS__2021] type=statement_combination solver=C(0.90) critic=confirm final=C tier=high
+  [PAPER__3150] type=definitional solver=C(0.80) critic=weaken final=C tier=high
+  [BOOKS__1723] type=statement_combination solver=D(0.90) critic=confirm final=D tier=high
+  [Critic] WARN: PAPER__3192: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "La definizione di \'debito insensibile alle informazioni\' non è chiaramente associata ai depositi a vista nei documenti forniti.",\n    "counterargument_type": "definition_missing",\n    "counterargument_strength": "moderate",\n    "rebuttal":'
+  [PAPER__3192] type=definitional solver=E(0.85) critic=confirm final=E tier=high
+  [PAPER__3509] type=statement_combination solver=C(0.90) critic=confirm final=C tier=high
+  [PAPER__2763] type=statement_combination solver=E(0.90) critic=weaken final=E tier=high
+  [Critic] WARN: BOOKS__436: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il ragionamento del sultore sembra basarsi su un errore di comprensione delle definizioni dei due indicatori. Il rapporto di concentrazione delle quattro aziende mette l\'accento sulle quattro più grandi, ma non necessariamente su una o due'
+  [BOOKS__436] type=statement_combination solver=E(0.90) critic=confirm final=E tier=high
+  [PAPER__2381] type=statement_combination solver=D(0.90) critic=weaken final=D tier=high
+  [Miner] WARN: FINANCIALS__3894: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 2, "relevance_score": 0.9, "key_extraction": "Società madre 2019 (1): 23.935.487; Costo delle merci vendute 2019: (12.648.207); Materiali, energia, servizi di terzi e altro 2019: (2.123.230)"},\n    {"passage_id": 3, "relevance_score": 0.8, "key_extractio'
+  [FINANCIALS__3894] type=numerical solver=B(1.00) critic=weaken final=B tier=high
+  [Miner] WARN: FINANCIALS__4139: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {"passage_id": 1, "relevance_score": 0.8, "key_extraction": "Ricavi consolidati 2019: 16.313.999; Ricavi consolidati 2018: 11.403.163"},\n    {"passage_id": 2, "relevance_score": 0.7, "key_extraction": "Utile lordo consolidato 2019: 166.958; Utile lordo consolidato 2018'
+  [FINANCIALS__4139] type=comparative solver=E(0.95) critic=weaken final=E tier=high
+  [FINANCIALS__3580] type=comparative solver=A(0.90) critic=weaken final=A tier=high
+  [Critic] WARN: PAPER__2954: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "La risposta proposta E non è incluso nelle opzioni fornite nella domanda.",\n    "counterargument_type": "other",\n    "counterargument_strength": "strong",\n    "rebuttal": "La risposta E non esiste nelle opzioni fornite, quindi non può esse'
+  [PAPER__2954] type=causal solver=E(0.95) critic=confirm final=E tier=high
+  [Critic] WARN: BOOKS__1989: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "phase_1_challenge": {\n    "strongest_counterargument": "Il solutore ha invertito la negazione nella domanda, considerando erroneamente l\'affermazione 1 come vera quando dovrebbe essere falsa poiché l\'elasticità dell\'offerta di manodopera non garantisce necessariamente un aumento della disoccupa'
+  [BOOKS__1989] type=statement_combination solver=D(0.90) critic=confirm final=D tier=high
+  [PAPER__2924] type=statement_combination solver=E(0.53) critic=flip final=B tier=high
+  [FINANCIALS__4749] type=numerical solver=A(1.00) critic=weaken final=A tier=high
+  [PAPER__3362] type=statement_combination solver=A(0.90) critic=weaken final=A tier=high
+  [PAPER__2820] type=causal solver=E(0.20) critic=flip final=E tier=low
+  [BOOKS__2029] type=statement_combination solver=C(0.90) critic=weaken final=C tier=high
+  [PAPER__2691] type=inferential solver=B(0.80) critic=weaken final=B tier=high
+  [Miner] WARN: FINANCIALS__4647: JSON extraction failed: Could not extract valid JSON from model output. First 300 chars: '{\n  "relevant_passages": [\n    {\n      "passage_id": 2,\n      "relevance_score": 1.0,\n      "key_extraction": "L\'aumento delle partecipazioni di minoranza dal 2023 al 2024"\n    },\n    {\n      "passage_id": 4,\n      "relevance_score": 0.8,\n      "key_extraction": "Totale partecipazioni di minoranza n'
+  [FINANCIALS__4647] type=numerical solver=C(0.95) critic=weaken final=C tier=high
+  [300/300] 38052s elapsed, ~0s ETA | acc=0.607
+Saved 500 predictions → /scratch.hpc/carmine.santella/Natural-Language-Processing-Unibo-PW/outputs/predictions.json
+
+Overall accuracy: 0.6067  (182/300)
+
+── By question type ──
+                       correct  total  accuracy
+category                                       
+causal                       9     20  0.450000
+comparative                  8     20  0.400000
+definitional                 9     19  0.473684
+factual                     23     29  0.793103
+inferential                  7      8  0.875000
+negation                     1      3  0.333333
+numerical                   32     46  0.695652
+statement_combination       92    154  0.597403
+temporal                     1      1  1.000000
+
+── By difficulty ──
+            correct  total  accuracy
+difficulty                          
+high              7     13  0.538462
+low              35     45  0.777778
+medium          140    242  0.578512
+
+── By critic verdict ──
+         correct  total  accuracy
+verdict                          
+confirm       50     84  0.595238
+flip          14     33  0.424242
+weaken       118    183  0.644809
+
+── By confidence tier ──
+          correct  total  accuracy
+tier                              
+high          173    272  0.636029
+low             3     12  0.250000
+near_tie        6     16  0.375000
+LocalChatClient: 342 generation calls
+
+Done in 38249s.

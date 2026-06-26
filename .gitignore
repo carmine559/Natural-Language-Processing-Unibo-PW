@@ -1,4 +1,6 @@
 .venv/
 hf_cache/
+venv/
+tmp/
 
 __pycache__/
