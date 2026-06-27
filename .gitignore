@@ -2,5 +2,5 @@
 hf_cache/
 venv/
 tmp/
-
+report/
 __pycache__/

@@ -21,6 +21,7 @@ from typing import Optional
 from .schemas import MCQSample, PipelineResult, ProfilerOutput, MinerOutput, SolverOutput, CriticOutput
 from .stages.profiler   import QuestionProfiler, _fallback_profile
 from .stages.miner      import ContextMiner, _fallback_miner
+from .stages.statement_evaluator import StatementEvaluator
 from .stages.solver     import SpecialistSolver
 from .stages.critic     import AdversarialCritic, _fallback_critic
 from .stages.aggregator import WeightedAggregator
@@ -59,11 +60,12 @@ class PrometeiaPipeline:
             self.chat_client = LocalChatClient(heavy_model)
             print("Solver/tiebreaker: heavy local model")
 
-        self.profiler   = QuestionProfiler(light_model)
-        self.miner      = ContextMiner(light_model)
-        self.solver     = SpecialistSolver(self.chat_client)
-        self.critic     = AdversarialCritic(heavy_model)
-        self.aggregator = WeightedAggregator(self.chat_client)
+        self.profiler    = QuestionProfiler(light_model)
+        self.miner       = ContextMiner(light_model)
+        self.stmt_eval   = StatementEvaluator(heavy_model)
+        self.solver      = SpecialistSolver(self.chat_client)
+        self.critic      = AdversarialCritic(heavy_model)
+        self.aggregator  = WeightedAggregator(self.chat_client)
 
         print(f"All models ready in {time.time()-t0:.0f}s.")
 
@@ -76,7 +78,15 @@ class PrometeiaPipeline:
             if prof_out is None:
                 prof_out = _fallback_profile(sample)
 
-            miner_out  = self.miner.run(sample, prof_out)
+            # For statement_combination questions, the statement evaluator
+            # pre-evaluates each statement and pre-scores options. Falls back
+            # to the regular miner if extraction fails.
+            if prof_out.question_type == "statement_combination":
+                miner_out = self.stmt_eval.run(sample, prof_out)
+                if miner_out is None:
+                    miner_out = self.miner.run(sample, prof_out)
+            else:
+                miner_out = self.miner.run(sample, prof_out)
             solver_out = self.solver.run(sample, prof_out, miner_out)
             critic_out = self.critic.run(sample, prof_out, miner_out, solver_out)
             agg_out    = self.aggregator.run(sample, prof_out, miner_out,
