@@ -7,7 +7,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -51,7 +51,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -117,7 +117,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -238,7 +238,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -254,9 +254,9 @@
   },
   {
     "sample_id": "PAPER__3513",
-    "prediction": "D",
+    "prediction": "B",
     "gold": "B",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
@@ -293,7 +293,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -309,9 +309,9 @@
   },
   {
     "sample_id": "BOOKS__2017",
-    "prediction": "A",
+    "prediction": "D",
     "gold": "D",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
@@ -425,7 +425,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -436,7 +436,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -458,7 +458,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -634,7 +634,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -744,7 +744,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -815,13 +815,13 @@
   },
   {
     "sample_id": "PAPER__3449",
-    "prediction": "C",
+    "prediction": "A",
     "gold": "A",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1200,9 +1200,9 @@
   },
   {
     "sample_id": "BOOKS__1206",
-    "prediction": "B",
+    "prediction": "C",
     "gold": "C",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
@@ -1437,7 +1437,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -1464,9 +1464,9 @@
   },
   {
     "sample_id": "BOOKS__2262",
-    "prediction": "B",
+    "prediction": "A",
     "gold": "B",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
@@ -1519,9 +1519,9 @@
   },
   {
     "sample_id": "FINANCIALS__4564",
-    "prediction": "C",
+    "prediction": "A",
     "gold": "A",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "numerical",
     "category": "net_impact_after_tax",
@@ -1811,7 +1811,7 @@
     "confidence_tier": "high",
     "question_type": "causal",
     "category": "relationship_description",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -1871,9 +1871,9 @@
   },
   {
     "sample_id": "PAPER__3414",
-    "prediction": "D",
+    "prediction": "B",
     "gold": "B",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
@@ -1937,13 +1937,13 @@
   },
   {
     "sample_id": "PAPER__2690",
-    "prediction": "D",
+    "prediction": "A",
     "gold": "C",
     "correct": false,
     "confidence_tier": "high",
     "question_type": "definitional",
     "category": "risk_liquidity_relationship",
-    "critic_verdict": "confirm",
+    "critic_verdict": "flip",
     "error": null
   },
   {
@@ -1954,7 +1954,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -1965,7 +1965,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -1987,7 +1987,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -2086,7 +2086,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -2185,7 +2185,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -2333,10 +2333,10 @@
   },
   {
     "sample_id": "BOOKS__1258",
-    "prediction": "D",
+    "prediction": "B",
     "gold": "D",
-    "correct": true,
-    "confidence_tier": "high",
+    "correct": false,
+    "confidence_tier": "near_tie",
     "question_type": "statement_combination",
     "category": "books_true",
     "critic_verdict": "weaken",
@@ -2493,7 +2493,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -2559,7 +2559,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -2790,7 +2790,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -2806,9 +2806,9 @@
   },
   {
     "sample_id": "BOOKS__2295",
-    "prediction": "B",
+    "prediction": "C",
     "gold": "B",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
@@ -2823,7 +2823,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -2856,7 +2856,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -2867,7 +2867,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -2933,7 +2933,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -3296,7 +3296,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -3378,9 +3378,9 @@
   },
   {
     "sample_id": "PAPER__3285",
-    "prediction": "A",
+    "prediction": "B",
     "gold": "B",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
@@ -3549,7 +3549,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -3675,7 +3675,7 @@
   },
   {
     "sample_id": "BOOKS__1766",
-    "prediction": "C",
+    "prediction": "A",
     "gold": "B",
     "correct": false,
     "confidence_tier": "high",
@@ -3686,13 +3686,13 @@
   },
   {
     "sample_id": "PAPER__2403",
-    "prediction": "C",
+    "prediction": "D",
     "gold": "C",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "weaken",
+    "critic_verdict": "flip",
     "error": null
   },
   {
@@ -3769,7 +3769,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -3802,14 +3802,14 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
     "sample_id": "PAPER__2860",
-    "prediction": "B",
+    "prediction": "A",
     "gold": "B",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "causal",
     "category": "redundant_factor",
@@ -3835,7 +3835,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -3956,7 +3956,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -4055,7 +4055,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -4220,7 +4220,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -4269,9 +4269,9 @@
   },
   {
     "sample_id": "BOOKS__1652",
-    "prediction": "C",
+    "prediction": "A",
     "gold": "A",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
@@ -4280,9 +4280,9 @@
   },
   {
     "sample_id": "PAPER__2499",
-    "prediction": "B",
+    "prediction": "A",
     "gold": "A",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
@@ -4341,7 +4341,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -4484,7 +4484,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -4682,7 +4682,7 @@
     "confidence_tier": "high",
     "question_type": "numerical",
     "category": "difference_between_years",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -4737,7 +4737,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -4808,13 +4808,13 @@
   },
   {
     "sample_id": "PAPER__2584",
-    "prediction": "A",
+    "prediction": "B",
     "gold": "B",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -4913,7 +4913,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -4973,13 +4973,13 @@
   },
   {
     "sample_id": "BOOKS__1744",
-    "prediction": "A",
+    "prediction": "D",
     "gold": "A",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -5028,13 +5028,13 @@
   },
   {
     "sample_id": "BOOKS__1404",
-    "prediction": "B",
+    "prediction": "D",
     "gold": "B",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -5056,7 +5056,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -5094,13 +5094,13 @@
   },
   {
     "sample_id": "PAPER__2470",
-    "prediction": "A",
+    "prediction": "B",
     "gold": "D",
     "correct": false,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -5210,7 +5210,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -5419,7 +5419,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "flip",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -5430,7 +5430,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "principal_components_analysis",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -5474,7 +5474,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "weaken",
+    "critic_verdict": "flip",
     "error": null
   },
   {
