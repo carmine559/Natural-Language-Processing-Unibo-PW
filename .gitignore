@@ -4,3 +4,4 @@ venv/
 tmp/
 report/
 __pycache__/
+cluster_outputs/
