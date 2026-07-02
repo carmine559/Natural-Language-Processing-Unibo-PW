@@ -5,3 +5,6 @@ tmp/
 report/
 __pycache__/
 cluster_outputs/
+
+job.sbatch
+setup_env.sh

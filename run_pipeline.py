@@ -2,10 +2,6 @@
 """
 run_pipeline.py — single launchable entry point for the Prometeia pipeline.
 
-Replaces the Kaggle notebooks 01–06: loads one dataset TSV, runs the full
-multi-agent pipeline on the single cluster GPU, writes predictions, and prints
-an accuracy breakdown when gold labels are present.
-
 Examples
 --------
   # quick 5-sample smoke test on the labelled validation set (L40 preset)
