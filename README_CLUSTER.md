@@ -25,7 +25,9 @@ cd <this-repo>
 bash setup_env.sh        # venv + deps + model cache, all under /scratch.hpc/<user>/
 ```
 Everything goes under `/scratch.hpc/<user>/` because the home quota is only 400 MB.
-`setup_env.sh` pre-downloads the model so compute nodes need no internet.
+`setup_env.sh` pre-downloads both models with `hf download`; this is optional
+(compute nodes can reach Hugging Face and download at first run), but it keeps
+GPU walltime from being spent on ~90 GB of checkpoint downloads.
 
 ## Submitting a job
 Edit `job.sbatch` (replace `name.surname`, choose `--partition`), then:

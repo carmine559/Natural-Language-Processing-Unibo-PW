@@ -4,7 +4,9 @@
 #
 # Creates the Python venv under /scratch.hpc/ (the home quota is only
 # 400 MB — far too small for a torch venv) and pre-downloads both models
-# into HF_HOME on scratch (compute nodes have no internet access).
+# into HF_HOME on scratch. The compute nodes CAN reach Hugging Face, so the
+# pre-download is optional — it just keeps the first GPU job from spending
+# its walltime downloading ~90 GB of checkpoints.
 #
 # Usage:
 #   ssh <name.surname>@giano.cs.unibo.it
@@ -45,11 +47,6 @@ pip3 install torch --no-cache-dir --index-url https://download.pytorch.org/whl/c
 # 3. The rest of the dependencies
 pip3 install --no-cache-dir -r requirements.txt
 
-# 4. Pre-download both models on giano — compute nodes have NO internet.
-#    BF16 checkpoints: Qwen3-14B ~28 GB + Qwen3-32B ~62 GB. The cache may
-#    still hold the old Qwen2.5 checkpoints (~90 GB, the rollback path):
-#    check free space first, and if the quota is tight delete the Qwen2.5-14B
-#    dir under ${HF_HOME}/hub (keep Qwen2.5-32B until Qwen3 is validated).
 echo
 echo "Scratch usage before model download:"
 df -h "/scratch.hpc/${USER}" || true
