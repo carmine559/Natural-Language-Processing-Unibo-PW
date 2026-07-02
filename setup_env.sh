@@ -3,8 +3,8 @@
 # setup_env.sh — run ONCE on giano.cs.unibo.it (the submit host).
 #
 # Creates the Python venv under /scratch.hpc/ (the home quota is only
-# 400 MB — far too small for a torch venv). The model itself is downloaded
-# at runtime by transformers on the first job, cached in HF_HOME on scratch.
+# 400 MB — far too small for a torch venv) and pre-downloads both models
+# into HF_HOME on scratch (compute nodes have no internet access).
 #
 # Usage:
 #   ssh <name.surname>@giano.cs.unibo.it
@@ -17,8 +17,8 @@ SCRATCH="/scratch.hpc/${USER}/Natural-Language-Processing-Unibo-PW"
 VENV="${SCRATCH}/venv"
 export HF_HOME="/scratch.hpc/${USER}/hf_cache"
 
-LIGHT_MODEL="${PROM_LIGHT_MODEL:-Qwen/Qwen2.5-14B-Instruct}"
-HEAVY_MODEL="${PROM_HEAVY_MODEL:-Qwen/Qwen2.5-32B-Instruct}"
+LIGHT_MODEL="${PROM_LIGHT_MODEL:-Qwen/Qwen3-14B}"
+HEAVY_MODEL="${PROM_HEAVY_MODEL:-Qwen/Qwen3-32B}"
 
 echo "Scratch dir  : ${SCRATCH}"
 echo "Venv         : ${VENV}"
@@ -45,10 +45,22 @@ pip3 install torch --no-cache-dir --index-url https://download.pytorch.org/whl/c
 # 3. The rest of the dependencies
 pip3 install --no-cache-dir -r requirements.txt
 
+# 4. Pre-download both models on giano — compute nodes have NO internet.
+#    BF16 checkpoints: Qwen3-14B ~28 GB + Qwen3-32B ~62 GB. The cache may
+#    still hold the old Qwen2.5 checkpoints (~90 GB, the rollback path):
+#    check free space first, and if the quota is tight delete the Qwen2.5-14B
+#    dir under ${HF_HOME}/hub (keep Qwen2.5-32B until Qwen3 is validated).
 echo
-echo "Setup complete. Both models will be downloaded automatically"
-echo "on the first job run and cached in ${HF_HOME} for subsequent runs."
-echo "  Light: ${LIGHT_MODEL} (~9 GB 4-bit)"
-echo "  Heavy: ${HEAVY_MODEL} (~20 GB 4-bit)"
+echo "Scratch usage before model download:"
+df -h "/scratch.hpc/${USER}" || true
+du -sh "${HF_HOME}/hub" 2>/dev/null || true
+
+huggingface-cli download "${LIGHT_MODEL}"
+huggingface-cli download "${HEAVY_MODEL}"
+
+echo
+echo "Setup complete. Both models are cached in ${HF_HOME}."
+echo "  Light: ${LIGHT_MODEL} (~9 GB 4-bit at runtime, thinking off)"
+echo "  Heavy: ${HEAVY_MODEL} (~20 GB 4-bit at runtime, thinking mode)"
 echo ""
 echo "Submit with:  sbatch job.sbatch"

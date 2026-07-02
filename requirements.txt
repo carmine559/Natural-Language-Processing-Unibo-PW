@@ -7,7 +7,7 @@
 #
 # Always pass --no-cache-dir on the cluster (the 400 MB home quota fills fast).
 
-transformers>=4.44
+transformers>=4.51   # Qwen3 support requires >=4.51
 accelerate>=0.30
 bitsandbytes>=0.43
 pydantic>=2.0

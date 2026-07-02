@@ -7,9 +7,16 @@ Kaggle + 2×T4 + Groq setup to run **fully local on a single cluster GPU**.
 ## Pipeline stages
 `Profiler → Context Miner → Specialist Solver → Adversarial Critic → Weighted Aggregator`
 
-All LLM stages share **one model** loaded once on the single GPU
-(`Qwen/Qwen2.5-14B-Instruct`, 4-bit). The solver + tiebreaker also use this
-local model unless you pass `--use-groq`.
+Two models load once on the single GPU (both NF4 4-bit):
+
+- **light** `Qwen/Qwen3-14B` (~9 GB) — profiler + miner, thinking off (fast).
+- **heavy** `Qwen/Qwen3-32B` (~20 GB) — solver, critic, statement evaluator and
+  tiebreaker, **thinking mode on**: the model reasons in a `<think>…</think>`
+  block (stripped automatically) before answering. Thinking calls use the
+  Qwen3-recommended sampling (temp 0.6 / top_p 0.95 / top_k 20) and a larger
+  generation budget (`ModelConfig.thinking_max_new_tokens`, default 3072).
+
+The solver + tiebreaker use the local heavy model unless you pass `--use-groq`.
 
 ## One-time setup (on giano)
 ```bash
@@ -25,9 +32,12 @@ Edit `job.sbatch` (replace `name.surname`, choose `--partition`), then:
 ```bash
 sbatch job.sbatch
 ```
-- **L40 (48 GB)** is the default — comfortably runs the 14B 4-bit model.
-- **RTX 2080 Ti (11 GB)**: switch `--partition` to `rtx2080`; if the 14B OOMs on
-  long contexts, set `export PROM_MODEL=Qwen/Qwen2.5-7B-Instruct` in `job.sbatch`.
+- **L40 (48 GB)** is the default — runs 14B + 32B together (~28 GB weights,
+  ~19 GB headroom for KV caches).
+- **RTX 2080 Ti (11 GB)**: switch `--partition` to `rtx2080` (single 14B for all
+  stages, thinking off); if the 14B OOMs on long contexts, set
+  `export PROM_LIGHT_MODEL=Qwen/Qwen3-8B PROM_HEAVY_MODEL=Qwen/Qwen3-8B`
+  in `job.sbatch`.
 
 ## Running directly (debugging / interactive)
 ```bash
@@ -58,7 +68,7 @@ python run_pipeline.py --partition l40 --data data/test_set_unlabelled_IT.tsv \
 |-----|---------|
 | `HF_HOME` | model cache (set to `/scratch.hpc/<user>/hf_cache`) |
 | `PROM_OUTPUT_DIR` | where predictions + checkpoints are written |
-| `PROM_MODEL` | force a specific model (overrides `--partition` preset) |
+| `PROM_LIGHT_MODEL` / `PROM_HEAVY_MODEL` | force specific models (override the `--partition` preset) |
 
 ## Outputs
 - `predictions.json` — `[{"id", "answer"}, ...]` submission file.

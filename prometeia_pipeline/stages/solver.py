@@ -206,6 +206,10 @@ def _parse_response(text: str) -> tuple[str, float, list[str], str]:
     except Exception:
         m      = re.search(r'"proposed_answer"\s*:\s*"([ABCDE])"', text)
         answer = m.group(1) if m else "A"
+        # This fallback silently biases toward "A" when no answer is found —
+        # surface it so format regressions show up in the run logs.
+        print(f"  [Solver] JSON parse failed, regex fallback → {answer} "
+              f"(match={'yes' if m else 'NO — defaulted'})")
         return answer, 0.4, [text[:300]], "aligned"
 
 

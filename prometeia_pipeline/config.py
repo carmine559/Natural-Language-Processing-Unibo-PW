@@ -13,17 +13,20 @@ GROQ_API_KEY: str = os.environ.get("GROQ_API_KEY", "")
 # ─────────────────────────────────────────────────────────────
 #  Model presets per cluster partition.
 #  The DISI cluster gives ONE GPU per node:
-#    l40       → Nvidia L40, 48 GB  → dual model: 14B + 32B (both 4-bit, ~32 GB)
+#    l40       → Nvidia L40, 48 GB  → dual model: 14B + 32B (both 4-bit, ~28 GB)
 #    rtx2080   → RTX 2080 Ti, 11 GB → single 14B-4bit only (~9 GB)
+#  Qwen3 generation: the heavy model runs in thinking mode (reasoning traces
+#  before the answer), which needs a larger generation budget — see
+#  ModelConfig.thinking_max_new_tokens.
 # ─────────────────────────────────────────────────────────────
 MODEL_PRESETS: Dict[str, Dict[str, str]] = {
     "l40": {
-        "light": "Qwen/Qwen2.5-14B-Instruct",    # profiler + miner
-        "heavy": "Qwen/Qwen2.5-32B-Instruct",    # solver + critic
+        "light": "Qwen/Qwen3-14B",    # profiler + miner
+        "heavy": "Qwen/Qwen3-32B",    # solver + critic (thinking mode)
     },
     "rtx2080": {
-        "light": "Qwen/Qwen2.5-14B-Instruct",    # all stages (11 GB limit)
-        "heavy": "Qwen/Qwen2.5-14B-Instruct",    # same — no room for 32B
+        "light": "Qwen/Qwen3-14B",    # all stages (11 GB limit; use Qwen3-8B if OOM)
+        "heavy": "Qwen/Qwen3-14B",    # same — no room for 32B
     },
 }
 
@@ -32,14 +35,23 @@ MODEL_PRESETS: Dict[str, Dict[str, str]] = {
 class ModelConfig:
     # Light model: profiler + miner (classification / evidence scoring).
     light_model_name: str = os.environ.get(
-        "PROM_LIGHT_MODEL", "Qwen/Qwen2.5-14B-Instruct"
+        "PROM_LIGHT_MODEL", "Qwen/Qwen3-14B"
     )
     # Heavy model: solver + critic (deeper reasoning).
     heavy_model_name: str = os.environ.get(
-        "PROM_HEAVY_MODEL", "Qwen/Qwen2.5-32B-Instruct"
+        "PROM_HEAVY_MODEL", "Qwen/Qwen3-32B"
     )
     use_4bit: bool = True            # ~9 GB for 14B, ~20 GB for 32B
     bnb_compute_dtype: str = "float16"
+
+    # Qwen3 thinking mode. The light model answers directly (fast); the heavy
+    # model reasons inside a <think>...</think> block before answering, which
+    # measurably helps solver/critic/statement-evaluator quality.
+    # Thinking calls ignore small per-call token budgets and generate up to
+    # thinking_max_new_tokens (the think block alone can take 1-2k tokens).
+    light_enable_thinking: bool = False
+    heavy_enable_thinking: bool = True
+    thinking_max_new_tokens: int = 3072
 
     # The cluster exposes exactly one GPU per job (--gres=gpu:1).
     gpu_device: str = "cuda:0"
