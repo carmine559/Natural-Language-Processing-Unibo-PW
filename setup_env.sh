@@ -52,8 +52,8 @@ echo "Scratch usage before model download:"
 df -h "/scratch.hpc/${USER}" || true
 du -sh "${HF_HOME}/hub" 2>/dev/null || true
 
-hf download "${LIGHT_MODEL}"
-hf download "${HEAVY_MODEL}"
+# hf download "${LIGHT_MODEL}"
+# hf download "${HEAVY_MODEL}"
 
 echo
 echo "Setup complete. Both models are cached in ${HF_HOME}."
