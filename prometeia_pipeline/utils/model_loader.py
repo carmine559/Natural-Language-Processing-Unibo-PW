@@ -93,21 +93,25 @@ class LocalModel:
         max_new_tokens: int = CONFIG.local_max_new_tokens,
         temperature: float = 1.0,
         do_sample: bool = False,
+        enable_thinking: bool | None = None,
     ) -> str:
+        # Per-call override (e.g. the critic disables thinking on the heavy
+        # model); None falls back to the instance default.
+        thinking = self.enable_thinking if enable_thinking is None else enable_thinking
+
         text = self.tokenizer.apply_chat_template(
             messages, tokenize=False, add_generation_prompt=True,
-            enable_thinking=self.enable_thinking,
+            enable_thinking=thinking,
         )
         inputs = self.tokenizer(text, return_tensors="pt").to(self.device)
 
-        if self.enable_thinking:
+        if thinking:
             # Qwen3 thinking mode degrades under greedy decoding (endless
             # repetitions), and the <think> block alone can take 1-2k tokens —
             # override the caller's answer-sized budget and sampling settings
             # with the vendor-recommended ones (temp 0.6 / top_p 0.95 / top_k 20).
-            gen_kwargs = dict(
-                max_new_tokens=max(max_new_tokens,
-                                   CONFIG.model.thinking_max_new_tokens),
+            budget = max(max_new_tokens, CONFIG.model.thinking_max_new_tokens)
+            sampling = dict(
                 do_sample=True,
                 temperature=max(0.6, temperature if do_sample else 0.0),
                 top_p=0.95,
@@ -115,40 +119,50 @@ class LocalModel:
             )
         elif do_sample:
             # Non-thinking sampled calls (vendor-recommended top_p/top_k).
-            gen_kwargs = dict(
-                max_new_tokens=max_new_tokens,
-                do_sample=True,
-                temperature=temperature,
-                top_p=0.8,
-                top_k=20,
-            )
+            budget = max_new_tokens
+            sampling = dict(do_sample=True, temperature=temperature,
+                            top_p=0.8, top_k=20)
         else:
-            gen_kwargs = dict(max_new_tokens=max_new_tokens, do_sample=False)
+            budget = max_new_tokens
+            sampling = dict(do_sample=False)
 
-        with torch.no_grad():
-            out = self.model.generate(
-                **inputs,
-                **gen_kwargs,
-                pad_token_id=self.tokenizer.eos_token_id,
-                eos_token_id=self.tokenizer.eos_token_id,
-            )
+        # A think block that exhausts the budget yields no answer at all
+        # (long FINANCIALS tables are the usual culprit) — retry once with a
+        # doubled budget before giving up.
+        for _ in range(2):
+            with torch.no_grad():
+                out = self.model.generate(
+                    **inputs,
+                    max_new_tokens=budget,
+                    **sampling,
+                    pad_token_id=self.tokenizer.eos_token_id,
+                    eos_token_id=self.tokenizer.eos_token_id,
+                )
 
-        new_ids = out[0][inputs.input_ids.shape[1]:].tolist()
-        new_ids = self._strip_think_block(new_ids)
-        if new_ids is None:
-            # Think block opened but never closed: the budget ran out before
-            # any answer was produced. Return "" so generate_json's retry
-            # (or the caller's regex fallback) kicks in.
-            return ""
-        return self.tokenizer.decode(new_ids, skip_special_tokens=True).strip()
+            new_ids = out[0][inputs.input_ids.shape[1]:].tolist()
+            answer_ids = self._strip_think_block(new_ids, thinking)
+            if answer_ids is not None:
+                return self.tokenizer.decode(
+                    answer_ids, skip_special_tokens=True
+                ).strip()
 
-    def _strip_think_block(self, token_ids: list[int]) -> list[int] | None:
+            budget *= 2
+            print(f"  [LocalModel] think block truncated after {len(new_ids)} "
+                  f"tokens — retrying with budget {budget}")
+
+        # Both attempts exhausted mid-think: return "" so generate_json's
+        # retry (or the caller's regex fallback) kicks in.
+        return ""
+
+    def _strip_think_block(
+        self, token_ids: list[int], thinking: bool
+    ) -> list[int] | None:
         """Drop the <think>...</think> reasoning block from generated ids.
 
         Returns None when a think block was opened but never closed
         (generation budget exhausted mid-reasoning → no usable answer).
         """
-        if not self.enable_thinking or self._think_close_id is None:
+        if not thinking or self._think_close_id is None:
             return token_ids
         try:
             idx = len(token_ids) - token_ids[::-1].index(self._think_close_id)
@@ -166,11 +180,13 @@ class LocalModel:
         schema: Type[T],
         max_retries: int = CONFIG.local_json_max_retries,
         max_new_tokens: int = CONFIG.local_max_new_tokens,
+        enable_thinking: bool | None = None,
     ) -> tuple[T | None, str | None]:
         current_messages = list(messages)
 
         for attempt in range(max_retries):
-            raw = self.generate(current_messages, max_new_tokens=max_new_tokens)
+            raw = self.generate(current_messages, max_new_tokens=max_new_tokens,
+                                enable_thinking=enable_thinking)
             parsed, error = parse_with_schema(raw, schema)
 
             if parsed is not None:

@@ -53,6 +53,12 @@ class ModelConfig:
     heavy_enable_thinking: bool = True
     thinking_max_new_tokens: int = 3072
 
+    # The critic runs on the heavy model but WITHOUT thinking: the Qwen3
+    # thinking critic became flip-happy (27 flips on 220 samples vs 2 for
+    # Qwen2.5, with only 33% of flip-verdict samples ending correct) and its
+    # calls dominated runtime. Overrides heavy_enable_thinking for Stage 3.
+    critic_enable_thinking: bool = False
+
     # The cluster exposes exactly one GPU per job (--gres=gpu:1).
     gpu_device: str = "cuda:0"
 
@@ -99,9 +105,13 @@ class AggregatorConfig:
     # When True, E's score is redistributed to A–D proportionally.
     suppress_e: bool = True
 
-    # Critic flip dampening: flips hurt accuracy (42% vs 66% for weaken).
-    # When True, flip verdicts are downgraded to weaken.
+    # Critic flip dampening: flips hurt accuracy on Qwen2.5 (42% vs 66% for
+    # weaken) and got worse with Qwen3 (33% of flip-verdict samples correct;
+    # 19/27 flipped questions were previously answered right). Even the
+    # "weaken" downgrade still moves weight off the solver, so flips are now
+    # neutralized to "confirm" by default ("weaken" = legacy behaviour).
     dampen_flips: bool = True
+    flip_downgrade_to: str = "confirm"
 
 
 @dataclass

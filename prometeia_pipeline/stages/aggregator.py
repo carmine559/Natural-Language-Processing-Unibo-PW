@@ -258,10 +258,12 @@ class WeightedAggregator:
         solver: SolverOutput,
         critic: CriticOutput,
     ) -> AggregatorOutput:
-        # Dampen critic flips: downgrade to weaken (flips hurt accuracy).
+        # Dampen critic flips (flips hurt accuracy — see AggregatorConfig).
+        # "confirm" neutralizes the flip entirely; "weaken" is the legacy
+        # downgrade that still shifts weight off the solver's answer.
         if CONFIG.aggregator.dampen_flips and critic.overall_verdict == "flip":
             critic = critic.model_copy(
-                update={"overall_verdict": "weaken",
+                update={"overall_verdict": CONFIG.aggregator.flip_downgrade_to,
                         "confidence_adjustment": max(critic.confidence_adjustment, -0.15)}
             )
 

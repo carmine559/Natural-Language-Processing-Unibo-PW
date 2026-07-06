@@ -20,6 +20,7 @@ from ..schemas import (
     CriticOutput, Phase1Challenge, DistractorAnalysis,
 )
 from ..utils.model_loader import LocalModel
+from ..config import CONFIG
 
 # ─────────────────────────────────────────────────────────────
 #  Attack vectors by question type
@@ -200,7 +201,12 @@ class AdversarialCritic:
         solver: SolverOutput,
     ) -> CriticOutput:
         messages    = _build_critic_messages(sample, profiler, miner, solver)
-        parsed, err = self.model.generate_json(messages, CriticOutput, max_new_tokens=700)
+        # Thinking disabled for the critic: the thinking critic over-flips
+        # and its calls dominate runtime (see ModelConfig.critic_enable_thinking).
+        parsed, err = self.model.generate_json(
+            messages, CriticOutput, max_new_tokens=700,
+            enable_thinking=CONFIG.model.critic_enable_thinking,
+        )
 
         if parsed is None:
             print(f"  [Critic] WARN: {sample.sample_id}: {err}")

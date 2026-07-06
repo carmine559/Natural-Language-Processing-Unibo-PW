@@ -11,10 +11,15 @@ Two models load once on the single GPU (both NF4 4-bit):
 
 - **light** `Qwen/Qwen3-14B` (~9 GB) — profiler + miner, thinking off (fast).
 - **heavy** `Qwen/Qwen3-32B` (~20 GB) — solver, critic, statement evaluator and
-  tiebreaker, **thinking mode on**: the model reasons in a `<think>…</think>`
-  block (stripped automatically) before answering. Thinking calls use the
-  Qwen3-recommended sampling (temp 0.6 / top_p 0.95 / top_k 20) and a larger
-  generation budget (`ModelConfig.thinking_max_new_tokens`, default 3072).
+  tiebreaker. Solver/evaluator/tiebreaker run with **thinking mode on**: the
+  model reasons in a `<think>…</think>` block (stripped automatically) before
+  answering, with Qwen3-recommended sampling (temp 0.6 / top_p 0.95 / top_k 20)
+  and a larger generation budget (`ModelConfig.thinking_max_new_tokens`,
+  default 3072; auto-doubled once if a think block truncates). The **critic
+  runs thinking-off** (`ModelConfig.critic_enable_thinking`): the thinking
+  critic over-flipped (27 flips / 220 samples, 33% correct) and dominated
+  runtime. Critic `flip` verdicts are neutralized to `confirm` in the
+  aggregator (`AggregatorConfig.flip_downgrade_to`).
 
 The solver + tiebreaker use the local heavy model unless you pass `--use-groq`.
 
