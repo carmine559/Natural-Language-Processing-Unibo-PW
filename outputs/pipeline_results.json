@@ -23,9 +23,9 @@
   },
   {
     "sample_id": "PAPER__3297",
-    "prediction": "C",
+    "prediction": "A",
     "gold": "C",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
@@ -73,7 +73,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -95,7 +95,7 @@
     "confidence_tier": "high",
     "question_type": "definitional",
     "category": "systemic_risk_factor",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -122,13 +122,13 @@
   },
   {
     "sample_id": "PAPER__3531",
-    "prediction": "A",
+    "prediction": "B",
     "gold": "C",
     "correct": false,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -161,7 +161,7 @@
     "confidence_tier": "high",
     "question_type": "definitional",
     "category": "financial_measure_definition",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -210,9 +210,9 @@
   },
   {
     "sample_id": "FINANCIALS__4439",
-    "prediction": "C",
+    "prediction": "A",
     "gold": "A",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "numerical",
     "category": "final_balance_calculation",
@@ -221,13 +221,13 @@
   },
   {
     "sample_id": "BOOKS__5913",
-    "prediction": "B",
+    "prediction": "D",
     "gold": "C",
     "correct": false,
-    "confidence_tier": "near_tie",
+    "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "confirm",
+    "critic_verdict": "weaken",
     "error": null
   },
   {
@@ -243,9 +243,9 @@
   },
   {
     "sample_id": "BOOKS__5796",
-    "prediction": "B",
+    "prediction": "A",
     "gold": "B",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
@@ -254,9 +254,9 @@
   },
   {
     "sample_id": "PAPER__3513",
-    "prediction": "B",
+    "prediction": "A",
     "gold": "B",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
@@ -279,7 +279,7 @@
     "prediction": "A",
     "gold": "A",
     "correct": true,
-    "confidence_tier": "high",
+    "confidence_tier": "near_tie",
     "question_type": "comparative",
     "category": "category_contribution",
     "critic_verdict": "confirm",
@@ -298,13 +298,13 @@
   },
   {
     "sample_id": "FINANCIALS__3955",
-    "prediction": "A",
+    "prediction": "D",
     "gold": "D",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "comparative",
     "category": "increase_in_liabilities",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -326,7 +326,7 @@
     "confidence_tier": "high",
     "question_type": "inferential",
     "category": "quality_characteristics_analysis",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -337,7 +337,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -381,7 +381,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -425,7 +425,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -568,7 +568,7 @@
     "confidence_tier": "high",
     "question_type": "comparative",
     "category": "absolute_decrease_comparison",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -579,7 +579,7 @@
     "confidence_tier": "high",
     "question_type": "causal",
     "category": "causal_factor",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -661,13 +661,13 @@
   },
   {
     "sample_id": "FINANCIALS__4945",
-    "prediction": "A",
+    "prediction": "C",
     "gold": "C",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "numerical",
     "category": "ratio_calculation",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -711,7 +711,7 @@
     "confidence_tier": "high",
     "question_type": "comparative",
     "category": "impact_on_earnings_per_share",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -744,7 +744,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -804,13 +804,13 @@
   },
   {
     "sample_id": "FINANCIALS__3786",
-    "prediction": "D",
+    "prediction": "B",
     "gold": "C",
     "correct": false,
     "confidence_tier": "high",
     "question_type": "comparative",
     "category": "contribution_analysis",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -865,7 +865,7 @@
     "confidence_tier": "high",
     "question_type": "factual",
     "category": "textual_reference",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -881,9 +881,9 @@
   },
   {
     "sample_id": "PAPER__2442",
-    "prediction": "A",
+    "prediction": "C",
     "gold": "A",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
@@ -914,9 +914,9 @@
   },
   {
     "sample_id": "FINANCIALS__4905",
-    "prediction": "A",
+    "prediction": "C",
     "gold": "C",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "numerical",
     "category": "difference_over_time",
@@ -980,9 +980,9 @@
   },
   {
     "sample_id": "BOOKS__5302",
-    "prediction": "C",
+    "prediction": "B",
     "gold": "B",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
@@ -1167,9 +1167,9 @@
   },
   {
     "sample_id": "BOOKS__1657",
-    "prediction": "C",
+    "prediction": "B",
     "gold": "B",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
@@ -1222,9 +1222,9 @@
   },
   {
     "sample_id": "FINANCIALS__3572",
-    "prediction": "C",
+    "prediction": "B",
     "gold": "B",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "comparative",
     "category": "trend_analysis",
@@ -1283,7 +1283,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1327,7 +1327,7 @@
     "confidence_tier": "high",
     "question_type": "inferential",
     "category": "theory_conclusion",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1387,9 +1387,9 @@
   },
   {
     "sample_id": "PAPER__3032",
-    "prediction": "C",
+    "prediction": "B",
     "gold": "C",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "inferential",
     "category": "causal_impact_analysis",
@@ -1404,18 +1404,18 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
     "sample_id": "PAPER__3562",
-    "prediction": "B",
+    "prediction": "A",
     "gold": "D",
     "correct": false,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1464,13 +1464,13 @@
   },
   {
     "sample_id": "BOOKS__2262",
-    "prediction": "A",
+    "prediction": "B",
     "gold": "B",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1481,7 +1481,7 @@
     "confidence_tier": "high",
     "question_type": "inferential",
     "category": "explanation_of_persistence",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1508,9 +1508,9 @@
   },
   {
     "sample_id": "PAPER__2679",
-    "prediction": "D",
+    "prediction": "C",
     "gold": "D",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "definitional",
     "category": "systemic_risk_definition",
@@ -1536,7 +1536,7 @@
     "confidence_tier": "high",
     "question_type": "definitional",
     "category": "agency_cost_structure",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1547,7 +1547,7 @@
     "confidence_tier": "high",
     "question_type": "comparative",
     "category": "liquidity_ratio_analysis",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1585,9 +1585,9 @@
   },
   {
     "sample_id": "FINANCIALS__3810",
-    "prediction": "A",
+    "prediction": "B",
     "gold": "B",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "comparative",
     "category": "impact_comparison",
@@ -1607,13 +1607,13 @@
   },
   {
     "sample_id": "BOOKS__5255",
-    "prediction": "A",
+    "prediction": "B",
     "gold": "B",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1701,7 +1701,7 @@
     "confidence_tier": "high",
     "question_type": "comparative",
     "category": "financial_position_analysis",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1723,7 +1723,7 @@
     "confidence_tier": "high",
     "question_type": "causal",
     "category": "agency_cost_cause",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1750,13 +1750,13 @@
   },
   {
     "sample_id": "PAPER__2737",
-    "prediction": "A",
+    "prediction": "C",
     "gold": "C",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "definitional",
     "category": "certainty_effect_definition",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1827,13 +1827,13 @@
   },
   {
     "sample_id": "BOOKS__1224",
-    "prediction": "C",
+    "prediction": "A",
     "gold": "A",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1871,13 +1871,13 @@
   },
   {
     "sample_id": "PAPER__3414",
-    "prediction": "B",
+    "prediction": "D",
     "gold": "B",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1893,9 +1893,9 @@
   },
   {
     "sample_id": "BOOKS__147",
-    "prediction": "A",
+    "prediction": "C",
     "gold": "C",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
@@ -1954,7 +1954,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1965,7 +1965,7 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -1987,14 +1987,14 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "weaken",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
     "sample_id": "FINANCIALS__3767",
-    "prediction": "B",
+    "prediction": "D",
     "gold": "B",
-    "correct": true,
+    "correct": false,
     "confidence_tier": "high",
     "question_type": "comparative",
     "category": "financial_trend_analysis",
@@ -2003,21 +2003,21 @@
   },
   {
     "sample_id": "FINANCIALS__4158",
-    "prediction": "A",
+    "prediction": "D",
     "gold": "D",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "causal",
     "category": "factor_analysis",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
     "sample_id": "PAPER__3263",
-    "prediction": "B",
+    "prediction": "A",
     "gold": "A",
-    "correct": false,
-    "confidence_tier": "near_tie",
+    "correct": true,
+    "confidence_tier": "high",
     "question_type": "inferential",
     "category": "explanation_persistence",
     "critic_verdict": "weaken",
@@ -2097,7 +2097,7 @@
     "confidence_tier": "high",
     "question_type": "definitional",
     "category": "systemic_risk_measure",
-    "critic_verdict": "flip",
+    "critic_verdict": "confirm",
     "error": null
   },
   {
@@ -2168,9 +2168,9 @@
   },
   {
     "sample_id": "BOOKS__1711",
-    "prediction": "A",
+    "prediction": "C",
     "gold": "C",
-    "correct": false,
+    "correct": true,
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_false",
@@ -2196,226 +2196,6 @@
     "confidence_tier": "high",
     "question_type": "statement_combination",
     "category": "books_true",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "PAPER__3428",
-    "prediction": "C",
-    "gold": "C",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "statement_combination",
-    "category": "books_false",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "FINANCIALS__3798",
-    "prediction": "B",
-    "gold": "B",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "comparative",
-    "category": "impact_on_operating_cash_flow",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "FINANCIALS__3856",
-    "prediction": "B",
-    "gold": "B",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "inferential",
-    "category": "tax_deferred_income_impact",
-    "critic_verdict": "weaken",
-    "error": null
-  },
-  {
-    "sample_id": "BOOKS__5639",
-    "prediction": "B",
-    "gold": "B",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "statement_combination",
-    "category": "books_true",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "PAPER__3202",
-    "prediction": "C",
-    "gold": "C",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "comparative",
-    "category": "modern_vs_historical",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "PAPER__2642",
-    "prediction": "D",
-    "gold": "D",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "statement_combination",
-    "category": "books_false",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "FINANCIALS__4026",
-    "prediction": "A",
-    "gold": "A",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "numerical",
-    "category": "net_change_calculation",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "PAPER__2780",
-    "prediction": "C",
-    "gold": "C",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "causal",
-    "category": "advantage_of_honest_estimation",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "PAPER__2663",
-    "prediction": "D",
-    "gold": "D",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "statement_combination",
-    "category": "books_false",
-    "critic_verdict": "flip",
-    "error": null
-  },
-  {
-    "sample_id": "BOOKS__30",
-    "prediction": "C",
-    "gold": "C",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "statement_combination",
-    "category": "books_true",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "FINANCIALS__4316",
-    "prediction": "B",
-    "gold": "B",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "numerical",
-    "category": "difference_over_time",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "BOOKS__5779",
-    "prediction": "D",
-    "gold": "D",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "statement_combination",
-    "category": "books_true",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "BOOKS__1258",
-    "prediction": "D",
-    "gold": "D",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "statement_combination",
-    "category": "books_true",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "FINANCIALS__4377",
-    "prediction": "B",
-    "gold": "B",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "causal",
-    "category": "cause_of_profit_decrease",
-    "critic_verdict": "flip",
-    "error": null
-  },
-  {
-    "sample_id": "FINANCIALS__4454",
-    "prediction": "A",
-    "gold": "C",
-    "correct": false,
-    "confidence_tier": "high",
-    "question_type": "comparative",
-    "category": "percentage_growth_comparison",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "BOOKS__166",
-    "prediction": "C",
-    "gold": "C",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "statement_combination",
-    "category": "books_true",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "BOOKS__5416",
-    "prediction": "A",
-    "gold": "A",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "statement_combination",
-    "category": "books_true",
-    "critic_verdict": "flip",
-    "error": null
-  },
-  {
-    "sample_id": "PAPER__2877",
-    "prediction": "C",
-    "gold": "C",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "causal",
-    "category": "asymmetric_information_consequences",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "FINANCIALS__4453",
-    "prediction": "B",
-    "gold": "B",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "numerical",
-    "category": "direct_lookup",
-    "critic_verdict": "confirm",
-    "error": null
-  },
-  {
-    "sample_id": "FINANCIALS__3605",
-    "prediction": "B",
-    "gold": "B",
-    "correct": true,
-    "confidence_tier": "high",
-    "question_type": "comparative",
-    "category": "proportionality_check",
     "critic_verdict": "confirm",
     "error": null
   }
