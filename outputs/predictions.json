@@ -1,0 +1,2002 @@
+[
+  {
+    "id": "BOOKS__1646",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3536",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3297",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__5422",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2502",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__5048",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2605",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3059",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2680",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4855",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1883",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3531",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3172",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__1417",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2681",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3136",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__5169",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4638",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3821",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4439",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__5913",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__1577",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__5796",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3513",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4522",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4892",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2474",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3955",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__2017",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3107",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__1139",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__4569",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4265",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3611",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2455",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3352",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1938",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4183",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__2022",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__1155",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__173",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3539",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4804",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3737",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1716",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__2867",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4275",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1727",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__5518",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5598",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__2249",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__3883",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3252",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3027",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2409",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2733",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4970",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2435",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4799",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3901",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4945",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__201",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4326",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__6164",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3603",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__202",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2840",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1293",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3997",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5336",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2648",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4503",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3664",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3786",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3449",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__544",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4159",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__5134",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3625",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2937",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2442",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2554",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4944",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4905",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__2162",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2931",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4748",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__351",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__389",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5302",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4836",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4417",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4706",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__1941",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4591",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3931",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3707",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__349",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3139",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3744",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__5024",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4883",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4468",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4440",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3936",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4516",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__1657",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2903",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3055",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__1206",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4140",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3572",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__1429",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4328",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1611",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__5018",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__6109",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2972",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__5304",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3618",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2700",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__4758",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__1476",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__1322",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__5099",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4006",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3032",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3424",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3562",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3407",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1540",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4815",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4141",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__2262",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3251",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3601",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4016",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2679",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4564",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2845",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__3576",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3035",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__20",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3987",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3810",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__2038",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5255",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4857",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4831",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1951",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3224",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3064",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4791",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5540",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3568",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5167",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2847",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__2222",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4297",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2737",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3847",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4783",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__2340",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2488",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__2962",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4303",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__1224",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3006",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4179",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3784",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3414",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__332",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__147",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3248",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__6181",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3906",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2690",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2656",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3313",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__5652",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3368",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__3767",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__4158",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3263",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__2288",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__5013",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3215",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4330",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3106",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__1928",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2946",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__5352",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4230",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3065",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__5121",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2677",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4088",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1711",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1631",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__411",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3428",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3798",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3856",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5639",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3202",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2642",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4026",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2780",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2663",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__30",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4316",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5779",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__1258",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__4377",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4454",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__166",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__5416",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2877",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4453",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3605",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5646",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__5218",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__2155",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__6",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3521",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4233",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1243",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3195",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3115",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4143",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5722",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2557",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3273",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2876",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1147",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2487",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__4688",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3919",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__5119",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3675",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__307",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4379",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__2099",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3722",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3016",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5958",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__1391",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__5087",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3199",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3025",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3538",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3275",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__5414",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__2362",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3848",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__2295",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3412",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3240",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3129",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1436",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__1622",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__382",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__1356",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__5275",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1877",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2916",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__2023",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__4380",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4587",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4288",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__2227",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__6082",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__5547",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5747",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4765",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2792",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3991",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2728",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__400",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4520",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__2028",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2870",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3243",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2922",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4163",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__5067",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1841",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__5813",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4534",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__5215",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__5061",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3326",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5529",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__2520",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4381",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__5695",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4542",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4839",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__5391",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1238",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3283",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3796",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4390",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__5089",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3545",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4236",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1624",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3285",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__1704",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__2950",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2923",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__3623",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3159",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__6250",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4261",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4926",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4597",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3213",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2602",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3757",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3802",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5341",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2560",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2774",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2497",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4412",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3056",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__2134",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3577",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4278",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3454",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__5690",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__3595",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3963",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1766",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2403",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2684",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1592",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4771",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4027",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__5161",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5502",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5312",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2998",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4050",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2556",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2860",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3655",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__2278",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__354",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4058",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__2350",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4314",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3117",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3458",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3204",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1740",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2551",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3166",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__2269",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__2138",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5525",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3324",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__2787",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3620",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__6253",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3442",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5835",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1654",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3190",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2943",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3163",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2905",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3853",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__5159",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4707",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__4689",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4607",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4853",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4312",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3638",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3003",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2705",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2601",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__2070",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__2466",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__1976",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__541",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__1652",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2499",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__6015",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__5904",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__494",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4334",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1227",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1349",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2644",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__6148",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__5252",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2775",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4630",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3733",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3710",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1992",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__2869",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__305",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5546",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1427",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4037",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4654",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__355",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3185",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__2480",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3318",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3062",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3506",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2441",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4056",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__5497",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__139",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3866",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3658",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3905",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2809",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3972",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4984",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__540",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__337",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2799",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2816",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3537",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4724",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__77",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2434",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1520",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3657",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4042",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2584",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4968",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2951",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2770",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4886",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__399",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__2186",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4659",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__5726",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1913",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__1455",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5658",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4631",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__5886",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4903",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__1744",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__6213",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3123",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__4366",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__3178",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1404",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2699",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__2617",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__4776",
+    "answer": "A"
+  },
+  {
+    "id": "FINANCIALS__3665",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3494",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2470",
+    "answer": "D"
+  },
+  {
+    "id": "BOOKS__2248",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__4018",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__6052",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__1135",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3303",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__3734",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__6139",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4467",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2850",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1849",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__3800",
+    "answer": "B"
+  },
+  {
+    "id": "PAPER__3272",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4354",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__493",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__3917",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__5651",
+    "answer": "A"
+  },
+  {
+    "id": "BOOKS__2021",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3150",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1723",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3192",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__3509",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__2763",
+    "answer": "B"
+  },
+  {
+    "id": "BOOKS__436",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2381",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__3894",
+    "answer": "B"
+  },
+  {
+    "id": "FINANCIALS__4139",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__3580",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2954",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__1989",
+    "answer": "D"
+  },
+  {
+    "id": "PAPER__2924",
+    "answer": "D"
+  },
+  {
+    "id": "FINANCIALS__4749",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__3362",
+    "answer": "A"
+  },
+  {
+    "id": "PAPER__2820",
+    "answer": "C"
+  },
+  {
+    "id": "BOOKS__2029",
+    "answer": "C"
+  },
+  {
+    "id": "PAPER__2691",
+    "answer": "C"
+  },
+  {
+    "id": "FINANCIALS__4647",
+    "answer": "C"
+  }
+]
